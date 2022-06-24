@@ -1,12 +1,11 @@
-Cyber Summer Camp 2020 (CSC2020)
+Cyber Camp 1.0 2022
 ======================
-forked from: [CSC2018](https://github.com/camel-clarkson/CSC/tree/CSC2018)
 
 # Summary and Audience
-CSC2020 is a STEM summer camp designed to engage and encourage the students to think about the more advanced computer systems and internet resources they interact with daily, from a strong security posture. The camp is geared towards students in Grades 8-12. The camp provides hands-on learning in the areas of cyber defense, programming, software, computer administration, networking, critical thinking, applied learning, and engineering methods and reasoning. Cyber Summer Camp is great prep for anyone looking to become a computer/IT technician and/or looking into a college degree of Computer Science or Computer Engineering. No prior experience is required.
+Cyber Camp 1.0 provides hands-on learning in the areas of networking, computer administration, malware, and basic scripting, with a security focus. The camp encourages critical thinking, applied learning, and engineering methods and reasoning. Cyber Camp 1.0 is great for those students who want to get a taste of computer/IT technician and feel what it is like to manage a computer system. The camp is geared towards students in Grades 9-12. No prior experience is required.
 
 # Objective
-Prepare students to understand basic to intermediate level concepts in cybersecurity. The camp begins with the campers learning Linux operating system and Linux commands. Students will then learn how to administer a computer system, while providing user services and maintaining security. This year we will introduce a network traffic analysis component as well.
+The objective of Cyber Camp 1.0 is to introduce and prepare students about the basic concepts in cyber security. The camp begins with the campers learning Linux operating system and Linux commands. Students will then learn how to administer a computer system, while providing user services and maintaining security.
 
 # Goals
 - Have Fun Learning
@@ -18,141 +17,156 @@ Prepare students to understand basic to intermediate level concepts in cybersecu
 
 # Outline
 
-## MONDAY - Intro, VM and Setup
+## Day 1 - Intro to Linux
+
 ### Welcome and Intro
-  - Teacher, Staff, and Intern
-  - Student
+  - Teachers
+  - Students
     - Name
     - Grade
     - School
     - What do you expect to learn?
     - What major do you want to choose in college?
-- [Pre Class Survey](https://forms.gle/UuWWRZpoXp9gY2VA6)
-
-### Intro to Virtual Machines
-  - [What is a Virtual Machine (VM)?](https://www.youtube.com/watch?v=yIVXjl4SwVo)
-  - [Why VM?](https://www.linkedin.com/learning/learning-vmware-vsphere-6-5/why-virtual-machines)
-  <!---
-  - Install [PUTTY](https://www.putty.org/) (if using Windows)
-  - Connect to Linux Virtual Machine on Amazon Web Services (AWS) using SSH
-  -->
-  
-<!---
-  - If you want to install your own Linux Virtual Machine, here are a couple of reference links:
-     - [Reference Tutorial 1](https://www.lifewire.com/run-ubuntu-within-windows-virtualbox-2202098)
-     - [Reference Tutorial 2](https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox)
--->
 
 ### Install MobaXterm (for Windows user)
 - Install [MobaXterm](https://mobaxterm.mobatek.net/download.html) (The Free Home Edition) 
 - Watch the [MobaXterm live demo](https://mobaxterm.mobatek.net/demo.html) to see how to setup the SSH connection
 
-### Install XQuartz (for Mac user)
+<!-- ### Install XQuartz (for Mac user)
 - Install [XQuartz](https://www.xquartz.org/)
 - Reboot
-
-### Connect to the Server
-- Connect to the Linux VM using SSH at this IPv4 address: 13.58.35.98
-
-<!---
-### Game Time: [The Command Line Murders](https://github.com/veltman/clmystery.git)
+  - Install [PUTTY](https://www.putty.org/) (if using Windows)
 -->
 
-## TUESDAY - Intro to Linux and Basic Commands
+### Open and use the Terminal app (for Mac user)
+- [Instructions](https://www.howtogeek.com/682770/how-to-open-the-terminal-on-a-mac/)
 
-### Review of Yesterday
+### Connect to the Server
+- Username is `<firstletter><lastname>` all in lowercase and the password is `password`, e.g., for John Doe the username is `jdoe`
+- Connect to the Linux server using SSH at this IP address: 3.12.96.179, e.g, `ssh jdoe@3.12.96.179`
 
-### [Linux File System](https://www.youtube.com/watch?v=HIXzJ3Rz9po)
+### Exercise: Changing Your Password
+- Use the `passwd` command to update your password
+- Enter your old password and then your new one. DON'T FORGET IT!
 
-### Getting Started with Linux (Continued)
+### Exercise: Finding the Secret File
+- Linux `cat <filename>` command to see the contents of file
+- Run `ls` to see the list of files in the current directory
+- Now try `ls -a` what is different?
+- Find the secret file and message of the instructors with its content on Zoom
+
+<!--
+### Intro to Virtual Machines
+  - [What is a Virtual Machine (VM)?]
+  - [Why VM?](https://www.linkedin.com/learning/learning-vmware-vsphere-6-5/why-virtual-machines)
+  - What happens when you press Power - [Boot Process](https://youtu.be/RgLMBXg5b9I)
+  - [Linux Boot Process](https://www.thegeekstuff.com/2011/02/linux-boot-process)
+  - If you want to install your own Linux Virtual Machine, here are a couple of reference links:
+     - [Reference Tutorial 1](https://www.lifewire.com/run-ubuntu-within-windows-virtualbox-2202098)
+     - [Reference Tutorial 2](https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox)
+ -->
+ 
+### Intro to Unix/Linux
 - [Unix history](https://youtu.be/7FjX7r5icV8)
 - [The story of Linux](https://youtu.be/5ocq6_3-nEw)
 - [How Linux is built](https://youtu.be/yVpbFMhOAwE)
-<!---
-- What happens when you press Power - [Boot Process](https://youtu.be/RgLMBXg5b9I)
-- [Linux Boot Process](https://www.thegeekstuff.com/2011/02/linux-boot-process)
--->
 
-- Linux fundamentals: Basic Commands\
+## Day 2 - Intro to the Command Line
+
+### Linux fundamentals: Basic Commands
   For each of the commands below (three per group), provide the following:
    1. Commands Name
    2. What it does
-   3. Useful Options
-   4. Two examples illustrating their usage
-    - man (default)
-    - Group1:
+   3. One or two examples illustrating their usage
+      - man
       - ls
+      - cat
+      - passwd
+   - Group1:
       - cd
       - whoami
-    - Group2:
-      - alias
+      - mkdir
+   - Group2:
+      - who
       - pwd
-      - cat
-    - Group3:
+      - history
+   - Group3:
       - cp
       - mv
       - rm
-    - Group4:
-      - mkdir
-      - history
+   - Group4:
       - wc
-    - Group5:
-      - more
-      - less
-      - wget
-    - Group6:
-      - tail
-      - head
-      - grep
-<!--
-### [Sudo](https://www.youtube.com/watch?v=imnEUvvDxc4)
--->
+      - echo
+      - w
 
 <!--
-### Installing Software/Packages
-- [apt-get](https://youtu.be/EJgXqQvqaIM)
-- Update & Upgrade
-- Install & Unistall
-- Look at all Packages in Software Manager
--
-### Users/Groups
-- [adduser/group](https://www.youtube.com/watch?v=-OzmiIPOTxI)
-- Add a user to your machine
-  - username = student ; pw = student
-  - giving sudo access to the user you created
-- Passwords (strong passwords are IMPORTANT!)
-- Permissions (root vs normal user)
-- deluser
-- Exercise - Can you add, then delete a user?
+- alias
+- wget
+- more
+- less
+- tail
+- head
 -->
 
-<!--### Fun exercise (Which group can remote log in first)-->
+### [Linux File System](https://www.youtube.com/watch?v=HIXzJ3Rz9po)
+- How do you find your home directory?
+- How do you navigate the file system?
 
-## WEDNESDAY - Network Traffic Analysis
+### Editing Files in Linux
+- Use the command `vim <filename>` to edit files
+- Vim is a very powerful editor, see [vim tutorial](https://www.openvim.com/)
+- Take save and exit a file type `:wq` for write and quit
 
-### Review of Yesterday
 
-### Packet/protocol analysis 
-Led by MSgt Christy Behrens
-- OSI model and the different layers
-- What is a byte, bit, nibble, etc.
-- A little discussion on where this type of job is done in the real word
-- Wireshark and basic uses
-- Live demo and practice
 
-## THURSDAY - Network 
+## Day 3 - Grep and Regular Expression
+### Using VIM to write your first C program
+<!--- [cat command](https://www.cyberciti.biz/faq/cat-line-numbers-and-ranges-under-unix-linux/)-->
+- [First c program](http://www.cs.cornell.edu/courses/cs113/2006fa/Write_Your_First_C_Program.html)
+<!--- Use vim to create `hello.c` and type in the following program
+```c
+#include <stdio.h>
 
-### Review of Yesterday
+int main() {
+	printf("Hello World!");
+	return 0;
+}
+```
+- Use command `gcc hello.c` to compile the program
+- Run `./a.out` to execute the binary
+-->
 
+### Getting Started with Linux (Continued)
+- [Redirect the output to a file](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file)
+### [Access Permission](https://en.wikipedia.org/wiki/File-system_permissions)
+- [chmod command](https://www.tutorialspoint.com/unix_commands/chmod.htm)
+### grep
+- [How To Use grep Command](https://phoenixnap.com/kb/grep-command-linux-unix-examples)
+- [A Beginner’s Guide To Grep](https://www.opensourceforu.com/2012/06/beginners-guide-gnu-grep-basics/)
+- search in the dictionary /usr/share/dict/words
+
+<!-- 
+### Regular Expressions (regex)
+- Powerful tool for searching
+- Work through this tutorial on regex: [Regex Tutorial](http://regextutorials.com/intro.html?Basic%20symbols)
+-->
+<!-- ### Exercise
+- Download the `week4_data.csv` file
+- This spreadsheet has 4 columns, `lastname`, `firstname`, `email`, `grade`
+- Write a command that returns all the entries of students who had an `A` for their `grade`
+- Write a command that returns only students whose `lastname` begins with A-L and `grade` is B or higher
+- --:
+<!---
+- Write a command that returns only the `email` and `grade` of students
+-->
+## Day 4 - Networking: Introduction
+<!-- ### Game Time: [The Command Line Murders](https://github.com/veltman/clmystery.git) -->
+  - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4)
 ### Networking
 - [IP Addresses](https://youtu.be/7_-qWlvQQtY)
 - [Network Ports](https://youtu.be/uMwzsh_Dd9Y)
 - [Common Ports](http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php)
 - [ifconfig](https://goinbigdata.com/demystifying-ifconfig-and-network-interfaces-in-linux/)
-
-<!--  
-### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)
--->
 
 #### Insecure Connection
 - Telnet, FTP, [RLogin/Rsh](https://sourcedaddy.com/networking/rlogin-rsh-and-rcp.html)
@@ -160,95 +174,120 @@ Led by MSgt Christy Behrens
 #### Secure Connection
 - [SSH](https://youtu.be/v_cVEpESG3g) 
 - service ssh status
-- /etc/ssh/sshd\_config
-<!--  
+<!-- 
+- /etc/ssh/sshd\_config 
 - [SSH Install](https://youtu.be/0KXZ6GnVza8)
 - [SSH Keys](https://www.youtube.com/watch?v=EuIYabZS3ow)
 - SSH into partner's machine with previously created account
 -->
-
 ### How to tell what doors (ports and services) are open
 - netstat -lntu
 - nmap localhost
 - [nmap cheat sheet](https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/)
 
 ### How to detect if someone is on your machine?
-- w (maybe the most useful command you will learn)
+- w
 - who
 - lastlog
 
 ### How to kill a process
 - ps
 - kill
-- Put commands in background with `&`. e.g., `wireshark my_test.pcap &`
-- Download [forever](https://github.com/camel-clarkson/CSC/blob/CSC2020/script/forever)
+- Put commands in background with `&`
+- wget `forever`
+<!-- - wget https://github.com/camel-clarkson/CSC/blob/CSC2020/script/forever -->
+- wget https://raw.githubusercontent.com/camel-clarkson/CSC/CSC2021s/script/forever
 - chmod of the file property
 - Run `forever` in background
 - Find `forever`'s pid using `ps`
 - Kill `forever` with the `kill` command
-<!--
-- pkill -KILL/STOP -u username
-- Lock account - passwd -l username
--->
 
 ### Malware
-<!--
-- [Malware](https://www.youtube.com/watch?v=afzkoB_lYNk)
--->
 - [Malware](https://youtu.be/juw6sPEGuEk)
 - [Virus vs Worm vs Trojan Horse](https://youtu.be/y8a3QoTg4VQ)
 - [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
 
-<!--### Services
-- start, stop, restart
-- /etc/init.d`
--->
-<!--
-### Intro to Scripts
-- changeSSHPort.sh
-setSSHBanner.sh - Banner - /etc/issue.net n
-- setHTML.sh
-getFailLog.sh - Logging Fails - /var/log/auth.log -->
+### Intro to Bash Scripting
+- We can put series of commands in a script and run it
+- Importantly we can store the outputs of commands in variables. Please try the following commands on command line,
+```bash
+id=$(whoami)
+echo $id
+```
+- We surround commands with `$(...)`
+- Variables are referenced with $, i.e., for a variable named `x` to use it we would write `$x`
 
-<!--
-### Node.js
-- Read the following Node.js tutorials: [tutorial 1](https://www.guru99.com/node-js-express.html) and [tutorial 2](https://medium.com/@adnanrahic/hello-world-app-with-node-js-and-express-c1eb7cfa8a30)
-- Make directory `public/views`
-- Then create `public/views/index.html` [example index.html](https://gist.github.com/nfarring/1113292). This will be what you see when you land on the webpage
-- [Intro to HTML](https://youtu.be/jVMKUyBXiiY)
-- Customize your index.html to include your name somewhere on the page
+### Exercise
+- Write the following hello world script using the vim editor
+- Remember to give the bash script a name, like mytest.sh
+```bash
+#!/bin/bash
+
+echo "Hello, World!"
+```
+- Run it by typing
+```bash
+bash mytest.sh
+```
+- Another way to run it is to use `chmod` command to make the file executable first then run it.  
+- Next, modify the script to ask user to input a name
+```bash
+#!/bin/bash
+
+echo "Write your name"
+read name
+
+echo "Hello, $name"
+```
+## Day 5 - Make Your Own Website and Server!
+<!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY) -->
+
+#### HTML5, CSS, and Javascript
+- How does the web work? [video](https://www.youtube.com/watch?v=keo0dglCj7I)
+- Cross site scripting attack: [video](https://www.youtube.com/watch?v=zv0kZKC6GAM)
+- Create a new directory for this project and navigate to it
+- Download `public.tar.gz` from this github repo
+- Use the `tar` command to extract the conents and use the `man` command to figure out what flags to use
+- The contents of the `public.tar.gz` file contain all the HTML, CSS, and client-side JS for you website
+- The main html file is located at `public/index.html`
+- Customize your `index.html` to include your name somewhere on the page (hint look for either a `<h1>` or `<h2>` tag)
 - Install the express package with `npm install express`
 - Create `app.js` in your project directory
-- The insturctors will provide you with the port to run your server on, E.g., port 8000
-- Add the following code to have the server serve your index.html to the client when they load the page
+- Add the following code to your `app.js` file
 ```js
+// Import express package
+var express = require('express');
+var app = express();
+// specify port number
+var port = 8000;
+
 // Handle request to serve main file
 app.get('/', function(req, res) {
-	// __dirname is the working directory of the project
-	res.sendFile(__dirname + '/public/views/index.html');
+        // __dirname is the working directory of the project
+        res.sendFile(__dirname + '/public/index.html');
 });
 
 // allow the server to serve content from public directory
 app.use(express.static('public'));
-```
-- Run the server in the background using the command `node`
-- Launch firefox and navigate to localhost:your-port-here
-- Ensure that you see your web page
-- Kill the node server using the `kill` command
--->
 
-<!--
-### Intro to Bash Scripting
+// Set server to listen to `port`
+app.listen(port, function() {
+        console.log('Server on port: ' + port);
+});
+```
+- Change the port number to one the instructors will give you
+- Run the server in the background using the command `node app.js &`
+- To see your webpage, open up your preferred web browser and navigate to `http://3.12.96.179:<your-port-number-here>`
+- Ensure that you see your web page
+- Kill the node server using `kill`
+
+### Bash Scripting Exercises
+- Run the command `ps aux`
 - Create script to launch node sever in the background
 - Create script to kill the node server **you** launched
-- Hint, what does the following command do? `ps aux | grep -E "$me.*[0-9][[:space:]]+node app.js" | tr -s ' '| cut -d ' ' -f 2` How does it work?
--->
-
-<!--### Firewalls
-- [UFW](https://www.youtube.com/watch?v=cscIe9fYKMU)
+- Hint, what does the following command do? `ps aux | grep -E "$me.*[0-9][[:space:]]+node app.js" | tr -s ' '| cut -d ' ' -f 2`, where `$me` is variable containing your username. How does it work?
+<!-- ### Firewalls
 - Practice denying your partner through both port and IP addr.
+- [Post Class Survey](https://forms.gle/i3LoSjwZvFU1KZAZA)
 -->
 
-### Closing
-- [Post Class Survey](https://forms.gle/i3LoSjwZvFU1KZAZA)
-- Closing remarks
