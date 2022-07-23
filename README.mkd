@@ -159,7 +159,7 @@ int main() {
 <!---
 - Write a command that returns only the `email` and `grade` of students
 -->
-## Day 4 - Networking: Introduction
+## Day 4 - Networking
 <!-- ### Game Time: [The Command Line Murders](https://github.com/veltman/clmystery.git) -->
   - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4)
 ### Networking
