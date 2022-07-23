@@ -43,11 +43,11 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
 
 ### Connect to the Server
 - Username is `<firstletter><lastname>` all in lowercase and the password is `password`, e.g., for John Doe the username is `jdoe`
-- Connect to the Linux server using SSH at this IP address: 3.12.96.179, e.g, `ssh jdoe@3.12.96.179`
+- Connect to the Linux server using SSH at this IP address: 52.15.176.176, e.g., `ssh jdoe@52.12.176.176`
 
 ### Exercise: Changing Your Password
 - Use the `passwd` command to update your password
-- Enter your old password and then your new one. DON'T FORGET IT!
+- Enter your old password and then your new one. **DON'T FORGET IT!**
 
 ### Exercise: Finding the Secret File
 - Linux `cat <filename>` command to see the contents of file
