@@ -120,21 +120,15 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
 
 
 ## Day 3 - Grep and Regular Expression
-### Using VIM to write your first C program
-<!--- [cat command](https://www.cyberciti.biz/faq/cat-line-numbers-and-ranges-under-unix-linux/)-->
-- [First c program](http://www.cs.cornell.edu/courses/cs113/2006fa/Write_Your_First_C_Program.html)
-<!--- Use vim to create `hello.c` and type in the following program
-```c
-#include <stdio.h>
-
-int main() {
-	printf("Hello World!");
-	return 0;
-}
+### Intro to Bash Scripting
+- We can put series of commands in a script and run it
+- Importantly we can store the outputs of commands in variables. Please try the following commands on command line,
+```bash
+id=$(whoami)
+echo $id
 ```
-- Use command `gcc hello.c` to compile the program
-- Run `./a.out` to execute the binary
--->
+- We surround commands with `$(...)`
+- Variables are referenced with $, i.e., for a variable named `x` to use it we would write `$x`
 
 ### Getting Started with Linux (Continued)
 - [Redirect the output to a file](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file)
@@ -207,15 +201,6 @@ int main() {
 - [Virus vs Worm vs Trojan Horse](https://youtu.be/y8a3QoTg4VQ)
 - [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
 
-### Intro to Bash Scripting
-- We can put series of commands in a script and run it
-- Importantly we can store the outputs of commands in variables. Please try the following commands on command line,
-```bash
-id=$(whoami)
-echo $id
-```
-- We surround commands with `$(...)`
-- Variables are referenced with $, i.e., for a variable named `x` to use it we would write `$x`
 
 ### Exercise
 - Write the following hello world script using the vim editor
