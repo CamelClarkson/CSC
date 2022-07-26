@@ -108,7 +108,7 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
 - head
 -->
 
-### [Linux File System]<!--(https://www.youtube.com/watch?v=HIXzJ3Rz9po)-->
+### Linux File System<!--(https://www.youtube.com/watch?v=HIXzJ3Rz9po)-->
 - How do you find your home directory?
 - How do you navigate the file system?
 
