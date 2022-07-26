@@ -158,18 +158,16 @@ echo $id
 - Powerful tool for searching
 - Work through this tutorial on regex: [Regex Tutorial](http://regextutorials.com/intro.html?Basic%20symbols)
 -->
+
 <!-- ### Exercise
 - Download the `week4_data.csv` file
 - This spreadsheet has 4 columns, `lastname`, `firstname`, `email`, `grade`
 - Write a command that returns all the entries of students who had an `A` for their `grade`
 - Write a command that returns only students whose `lastname` begins with A-L and `grade` is B or higher
-- --:
-<!---
-- Write a command that returns only the `email` and `grade` of students
--->
+
 ## Day 4 - Networking
-<!-- ### Game Time: [The Command Line Murders](https://github.com/veltman/clmystery.git) -->
   - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4)
+  - 
 ### Networking
 - [IP Addresses](https://youtu.be/7_-qWlvQQtY)
 - [Network Ports](https://youtu.be/uMwzsh_Dd9Y)
@@ -182,12 +180,12 @@ echo $id
 #### Secure Connection
 - [SSH](https://youtu.be/v_cVEpESG3g) 
 - service ssh status
-<!-- 
+
 - /etc/ssh/sshd\_config 
 - [SSH Install](https://youtu.be/0KXZ6GnVza8)
 - [SSH Keys](https://www.youtube.com/watch?v=EuIYabZS3ow)
 - SSH into partner's machine with previously created account
--->
+
 ### How to tell what doors (ports and services) are open
 - netstat -lntu
 - nmap localhost
@@ -203,7 +201,6 @@ echo $id
 - kill
 - Put commands in background with `&`
 - wget `forever`
-<!-- - wget https://github.com/camel-clarkson/CSC/blob/CSC2020/script/forever -->
 - wget https://raw.githubusercontent.com/camel-clarkson/CSC/CSC2021s/script/forever
 - chmod of the file property
 - Run `forever` in background
@@ -241,7 +238,7 @@ echo "Hello, $name"
 ## Day 5 - Make Your Own Website and Server!
 <!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY) -->
 
-#### HTML5, CSS, and Javascript
+<!-- #### HTML5, CSS, and Javascript
 - How does the web work? [video](https://www.youtube.com/watch?v=keo0dglCj7I)
 - Cross site scripting attack: [video](https://www.youtube.com/watch?v=zv0kZKC6GAM)
 - Create a new directory for this project and navigate to it
