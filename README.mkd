@@ -133,7 +133,7 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
 
 
 
-<!--## Day 3 - Grep and Regular Expression
+<!-- ## Day 3 - Grep and Regular Expression
 ### Intro to Bash Scripting
 - We can put series of commands in a script and run it
 - Importantly we can store the outputs of commands in variables. Please try the following commands on command line,
@@ -289,4 +289,4 @@ app.listen(port, function() {
 - Practice denying your partner through both port and IP addr.
 - [Post Class Survey](https://forms.gle/i3LoSjwZvFU1KZAZA)
 -->
-
+ -->
