@@ -113,13 +113,27 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
 - How do you navigate the file system?
 
 ### Editing Files in Linux
+- Vim (Vi IMproved) is a text editor for Linux and the preferred text editor for this course
 - Use the command `vim <filename>` to edit files
-- Vim is a very powerful editor, see [vim tutorial](https://www.openvim.com/)
-- Take save and exit a file type `:wq` for write and quit
+- Two primary modes:
+  - Escape: the mode where you type commands, which you enter via `<esc>` 
+  - Insert: the mode where you type text, which you enter from escape mode via `i`
+- List of very helpful commands. **All commands can only be executed from escape mode!**
+  - `:wq` save and quit the file
+  - `h`, `j`, `k`, and `l` navigate around the file: left, up, down, right
+  - `o` insert line below
+  - `O` insert line above
+  - `dd` delete current line
+  - `yy` to yank current line to vim buffer, i.e., copy
+  - `p` to paste content in vim buffer
+  - `^` navigate to beginning of line
+  - `$` navigate to end of line
+- For further information see this [tutorial](https://www.openvim.com/)
+- Redirect the output of the `w` or `who` command to a file, then read using VIM on this file
 
 
 
-## Day 3 - Grep and Regular Expression
+<!--## Day 3 - Grep and Regular Expression
 ### Intro to Bash Scripting
 - We can put series of commands in a script and run it
 - Importantly we can store the outputs of commands in variables. Please try the following commands on command line,
