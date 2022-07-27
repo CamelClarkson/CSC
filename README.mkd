@@ -143,7 +143,7 @@ echo $id
 ### Bash Scripting Assignment
 - Write a bash script named `find_home.sh` which will change the directory of the script to the **user's** home directory 
 
-<!-- ## Day 3 - Grep and Regular Expression
+## Day 3 - Grep and Regular Expression
 ### Intro to Bash Scripting
 - We can put series of commands in a script and run it
 - Importantly we can store the outputs of commands in variables. Please try the following commands on command line,
@@ -163,19 +163,17 @@ echo $id
 - [A Beginner’s Guide To Grep](https://www.opensourceforu.com/2012/06/beginners-guide-gnu-grep-basics/)
 - search in the dictionary /usr/share/dict/words
 
-<!-- 
 ### Regular Expressions (regex)
 - Powerful tool for searching
 - Work through this tutorial on regex: [Regex Tutorial](http://regextutorials.com/intro.html?Basic%20symbols)
--->
 
-<!-- ### Exercise
+### Exercise
 - Download the `week4_data.csv` file
 - This spreadsheet has 4 columns, `lastname`, `firstname`, `email`, `grade`
 - Write a command that returns all the entries of students who had an `A` for their `grade`
 - Write a command that returns only students whose `lastname` begins with A-L and `grade` is B or higher
 
-## Day 4 - Networking
+<!-- ## Day 4 - Networking
   - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4)
   - 
 ### Networking
