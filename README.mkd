@@ -143,17 +143,7 @@ echo $id
 ### Bash Scripting Assignment
 - Write a bash script named `find_home.sh` which will change the directory of the script to the **user's** home directory 
 
-## Day 3 - Grep and Regular Expression
-### Intro to Bash Scripting
-- We can put series of commands in a script and run it
-- Importantly we can store the outputs of commands in variables. Please try the following commands on command line,
-```bash
-id=$(whoami)
-echo $id
-```
-- We surround commands with `$(...)`
-- Variables are referenced with $, i.e., for a variable named `x` to use it we would write `$x`
-
+## Day 3 - Grep and Regular Expressions
 ### Getting Started with Linux (Continued)
 - [Redirect the output to a file](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file)
 ### [Access Permission](https://en.wikipedia.org/wiki/File-system_permissions)
