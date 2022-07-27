@@ -145,7 +145,7 @@ echo $id
 
 ## Day 3 - Grep and Regular Expressions
 ### Getting Started with Linux (Continued)
-- [Redirect the output to a file](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file)
+- To redirect ouput to a file use `>`, to append to a file use `>>`
 ### [Access Permission](https://en.wikipedia.org/wiki/File-system_permissions)
 - [chmod command](https://www.tutorialspoint.com/unix_commands/chmod.htm)
 ### grep
