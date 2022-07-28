@@ -211,28 +211,48 @@ echo $id
 - [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
 
 
-### Exercise
-- Write the following hello world script using the vim editor
-- Remember to give the bash script a name, like mytest.sh
-```bash
-#!/bin/bash
-
-echo "Hello, World!"
+### Python
+- Python is a high-level interpreted language which is used for many things from web developement to scientific computing
+- Writing hello world in Python is very simple compared to other languages like C or Java
+- Create a file named `hello_world.py`
+```python
+print('Hello, World!')
 ```
-- Run it by typing
-```bash
-bash mytest.sh
-```
-- Another way to run it is to use `chmod` command to make the file executable first then run it.  
-- Next, modify the script to ask user to input a name
-```bash
-#!/bin/bash
+- To run this file type `python3 hello_world.py`
+- A useful idea in programming is flow control, consider the following
+```python
+grade = 59
 
-echo "Write your name"
-read name
-
-echo "Hello, $name"
+if grade < 60:
+  print('Failing')
+else:
+  print('Passing')
 ```
+- Lists are a convient way to store groups of objects
+- The for loop can iterate through list by syntax
+```python
+for element in my_list
+  # do thing with element
+  ```
+- Consider the following example
+```python
+grades = [['Alice', 89], ['Bob', 95], ['Carl', 60], ['Daniel', 73], ['Eve, 83], ['Faith', 51]]
+
+for student, grade in grades:
+  letter_grade = 'F'
+  if grade >= 90:
+    letter_grade = 'A'    
+  elif grade >= 80:
+    letter_grade = 'B'
+  elif grade >= 70:
+    letter_grade = 'C'
+  elif grade >= 60:
+    letter_grade = 'D'
+   
+  print(student + ' has grade ' + letter_grade)
+  ```
+
+
 <!--## Day 5 - Make Your Own Website and Server!
 <!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY) -->
 
@@ -284,4 +304,3 @@ app.listen(port, function() {
 - Practice denying your partner through both port and IP addr.
 - [Post Class Survey](https://forms.gle/i3LoSjwZvFU1KZAZA)
 -->
- -->
