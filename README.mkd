@@ -163,7 +163,7 @@ echo $id
 - Write a command that returns all the entries of students who had an `A` for their `grade`
 - Write a command that returns only students whose `lastname` begins with A-L and `grade` is B or higher
 
-<!-- ## Day 4 - Networking
+## Day 4 - Networking
   - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4)
   - 
 ### Networking
