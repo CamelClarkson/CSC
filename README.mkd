@@ -68,6 +68,7 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
  
 ### Intro to Unix/Linux
 - [Unix history](https://youtu.be/7FjX7r5icV8)
+- [Unix vs. Linux](https://www.tutorialspoint.com/difference-between-linux-and-unix)
 - [The story of Linux](https://youtu.be/5ocq6_3-nEw)
 - [How Linux is built](https://youtu.be/yVpbFMhOAwE)
 
