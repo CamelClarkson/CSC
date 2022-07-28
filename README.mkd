@@ -71,6 +71,7 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
 - [Unix vs. Linux](https://www.tutorialspoint.com/difference-between-linux-and-unix)
 - [The story of Linux](https://youtu.be/5ocq6_3-nEw)
 - [How Linux is built](https://youtu.be/yVpbFMhOAwE)
+- [Difference between Linux and Unix](https://www.guru99.com/difference-unix-vs-linux.html)
 
 ## Day 2 - Intro to the Command Line
 
@@ -109,7 +110,7 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
 - head
 -->
 
-### Linux File System<!--(https://www.youtube.com/watch?v=HIXzJ3Rz9po)-->
+### [Linux File System](https://www.youtube.com/watch?v=HIXzJ3Rz9po)
 - How do you find your home directory?
 - How do you navigate the file system?
 
@@ -180,10 +181,12 @@ echo $id
 - [SSH](https://youtu.be/v_cVEpESG3g) 
 - service ssh status
 
+<!--
 - /etc/ssh/sshd\_config 
 - [SSH Install](https://youtu.be/0KXZ6GnVza8)
 - [SSH Keys](https://www.youtube.com/watch?v=EuIYabZS3ow)
 - SSH into partner's machine with previously created account
+-->
 
 ### How to tell what doors (ports and services) are open
 - netstat -lntu
