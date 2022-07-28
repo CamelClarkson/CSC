@@ -165,7 +165,7 @@ echo $id
 
 ## Day 4 - Networking
   - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4)
-  - 
+
 ### Networking
 - [IP Addresses](https://youtu.be/7_-qWlvQQtY)
 - [Network Ports](https://youtu.be/uMwzsh_Dd9Y)
