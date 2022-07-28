@@ -233,7 +233,7 @@ read name
 
 echo "Hello, $name"
 ```
-## Day 5 - Make Your Own Website and Server!
+<!--## Day 5 - Make Your Own Website and Server!
 <!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY) -->
 
 <!-- #### HTML5, CSS, and Javascript
