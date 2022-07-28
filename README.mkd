@@ -236,7 +236,7 @@ for element in my_list
   ```
 - Consider the following example
 ```python
-grades = [['Alice', 89], ['Bob', 95], ['Carl', 60], ['Daniel', 73], ['Eve, 83], ['Faith', 51]]
+grades = [['Alice', 89], ['Bob', 95], ['Carl', 60], ['Daniel', 73], ['Eve', 83], ['Faith', 51]]
 
 for student, grade in grades:
   letter_grade = 'F'
