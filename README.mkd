@@ -73,8 +73,6 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
 - [How Linux is built](https://youtu.be/yVpbFMhOAwE)
 - [Difference between Linux and Unix](https://www.guru99.com/difference-unix-vs-linux.html)
 
-## Day 2 - Intro to the Command Line
-
 ### Linux fundamentals: Basic Commands
   For each of the commands below (three per group), provide the following:
    1. Commands Name
@@ -145,7 +143,7 @@ echo $id
 ### Bash Scripting Assignment
 - Write a bash script named `find_home.sh` which will change the directory of the script to the **user's** home directory 
 
-## Day 3 - Grep and Regular Expressions
+## Day 2 - Linux Systems
 ### Getting Started with Linux (Continued)
 - To redirect ouput to a file use `>`, to append to a file use `>>`
 ### [Access Permission](https://en.wikipedia.org/wiki/File-system_permissions)
@@ -165,8 +163,8 @@ echo $id
 - Write a command that returns all the entries of students who had an `A` for their `grade`
 - Write a command that returns only students whose `lastname` begins with A-L and `grade` is B or higher
 
-## Day 4 - Networking
-  - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4)
+<!-- ## Day 4 - Networking
+  - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4) -->
 
 ### Networking
 - [IP Addresses](https://youtu.be/7_-qWlvQQtY)
@@ -208,13 +206,13 @@ echo $id
 - Run `forever` in background
 - Find `forever`'s pid using `ps`
 - Kill `forever` with the `kill` command
-
-## Day 5: Malware and Encryption
+- 
 ### Malware
 - [Malware](https://youtu.be/juw6sPEGuEk)
 - [Virus vs Worm vs Trojan Horse](https://youtu.be/y8a3QoTg4VQ)
 - [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
 
+## Day 3 - Introduction to Python and Encryption
 
 ### Python
 - Python is a high-level interpreted language which is used for many things from web developement to scientific computing
@@ -406,7 +404,7 @@ app.listen(port, function() {
 - [Post Class Survey](https://forms.gle/i3LoSjwZvFU1KZAZA)
 -->
 
-#### Python Script on Fibonacci sequence
+<!-- #### Python Script on Fibonacci sequence
 - [Fibonacci sequence](https://youtu.be/v6PTrc0z4w4) is a famous recurrence relationship that occurs often in nature
 - The first two elements are `f[0] = 0` and `f[1] = 1`
 - Then for any `n > 1` we have `f[n] = f[n-1] + f[n-2]`
@@ -470,14 +468,13 @@ for i in range(10):
 	print(i)
 ```
 - Modify fibonacci program to print out n elements of the sequence
+ -->
 
-
-## Day 2: Encryption (Public Key Cryptography)
+### Encryption (Public Key Cryptography)
 - Use `wget` to download this [`.vimrc`](https://raw.githubusercontent.com/CamelClarkson/ACSC/main/.vimrc)
 - Intro [video](https://www.youtube.com/watch?v=AQDCe585Lnc)
 - How do we achieve this asymmetric (public) encryption?
 - One way is through prime numbers
-
 
 ### Introduction to Prime Numbers
 - What is a prime number?
@@ -631,7 +628,7 @@ def get_prime(n):
 - Our Python implementation is very slow
 - Going forward we will use the `pycrypto` library to preform this task faster
 
-## Day 3: The RSA Algorithm
+## Day 4: The RSA Algorithm and Running a Webserver
 ### Review
 - Prime Number Generation
 ![Block Diagram](https://github.com/CamelClarkson/ACSC/blob/main/get_prime.png?raw=true)
@@ -800,8 +797,6 @@ elif args.decrypt is not None:
 - Now test out your cryptosystem!
 - Ransomware [Video1](https://youtu.be/FV-HW3NYdF8)[Video2](https://youtu.be/Vkjekr6jacg)
 
-## Day 4: Cross Site Scriping (XSS) Attack
-
 ### Build Basic Bootstrap Webpage with Node.js
 - Bootstrap is a tool to "quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins."
 - Create a new directory for this project and navigate to it
@@ -862,7 +857,7 @@ server.listen(port, () => {
 - Ensure that you see your web page
 - Kill the node server using the `kill` command
 
-### Intro to the XSS Attack
+## Day 5 - XXS Attacks and Timing Attacks
 - Cross site scripting attack: [video](https://www.youtube.com/watch?v=zv0kZKC6GAM)
 
 ### Building a Chat Room Using Node.js and Socket.io
@@ -1089,7 +1084,7 @@ data.message = sanitize_input(data.message);
 ```
 - To santize code use string replace, e.g., `content = content.replace(/stuff-to-replace/g, 'replaced-string');`
 
-## Day 5: Timing Based Attacks
+### Timing Based Attacks
 - Example [video](https://www.youtube.com/watch?v=2-zQp26nbY8)
 - Use timeit library to measure execution time
 - Create a test function
