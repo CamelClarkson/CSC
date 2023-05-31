@@ -405,3 +405,821 @@ app.listen(port, function() {
 - Practice denying your partner through both port and IP addr.
 - [Post Class Survey](https://forms.gle/i3LoSjwZvFU1KZAZA)
 -->
+
+#### Python Script on Fibonacci sequence
+- [Fibonacci sequence](https://youtu.be/v6PTrc0z4w4) is a famous recurrence relationship that occurs often in nature
+- The first two elements are `f[0] = 0` and `f[1] = 1`
+- Then for any `n > 1` we have `f[n] = f[n-1] + f[n-2]`
+- We can write a recurisive python function for this
+```python
+
+n = 10
+
+# Fibonacci function
+def fib(n):
+    # conditionals in python, == checks for equality, = is for assignment
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+
+
+print(fib(n))
+```
+- Save the script as `fib.py`
+- To run the script enter `python3 fib.py`
+- Currently, you have to manually edit the script to change values for `n`
+- What if you could pass command line arguments?
+- Use `argparse` see the example code below
+```python
+# use the import keyword to import additional libraries!
+import argparse
+
+parser = argparse.ArgumentParser()
+
+# add argument and doc string to appear if -h or --help is entered
+parser.add_argument(
+    'n',
+    type=int,
+    help='n-th element of Fibonacci sequence to compute'
+)
+
+# grab arguments
+args = parser.parse_args()
+
+
+# Fibonacci function
+def fib(n):
+    # conditionals in python, == checks for equality, = is for assignment
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+
+
+print(fib(args.n))
+```
+- For loops repeat an action
+```python
+# prints 1 ... 10
+for i in range(10):
+	print(i)
+```
+- Modify fibonacci program to print out n elements of the sequence
+
+
+## Day 2: Encryption (Public Key Cryptography)
+- Use `wget` to download this [`.vimrc`](https://raw.githubusercontent.com/CamelClarkson/ACSC/main/.vimrc)
+- Intro [video](https://www.youtube.com/watch?v=AQDCe585Lnc)
+- How do we achieve this asymmetric (public) encryption?
+- One way is through prime numbers
+
+
+### Introduction to Prime Numbers
+- What is a prime number?
+- There are no efficient algorithms for finding primes
+- Why might this be useful for security? [Video](https://youtu.be/56fa8Jz-FQQ)
+
+### Miller-Rabin Primality Test
+- [Algorithm](https://www.youtube.com/watch?v=p5S0C8oKpsM) to test if an integer is prime developed by Dr. Gary Miller and Dr. Michael Rain in the later 1970s
+- Here is a template to get started
+```python
+import argparse
+import random
+
+# Parse input arguments
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    'n',
+    type=int,
+    help='Odd integer larger than 2'
+)
+parser.add_argument(
+    '-k', '--n_of_iters',
+    type=int,
+    default=40,
+    help='Number of iterations of Miller-Rabin test'
+)
+
+args = parser.parse_args()
+
+# check if valid input
+assert not(args.n % 2 == 0 or args.n <= 2), "Not a valid integer!"
+assert args.n_of_iters > 0, "Not a valid number of iterations!"
+
+
+def test(n, a, t, s):
+    # x = a^s  (mod n)
+    x = pow(a, s, n)
+
+    if x == 1 or x == n - 1:
+        return True
+
+    for j in range(t - 1):
+        # x = x^2  (mod n)
+        x = pow(x, 2, n)
+
+        if x == n - 1:
+            return True
+
+    return False
+
+
+# find n = 2^t * s + 1
+n = args.n - 1
+t = 0
+while n % 2 == 0:
+    n /= 2
+    t += 1
+s = int(n)
+
+for i in range(args.n_of_iters):
+    a = random.randint(1, args.n-1)
+    is_prime = test(args.n, a, t, s)
+
+    if not is_prime:
+        print('Composite')
+        exit()
+
+print('Probably Prime')
+```
+
+### Create Two Random Primes
+- Two primality tests
+	1. Check against low level primes
+	2. Use Miller-Rabin
+- Use `wget` to download list of first 100000 primes from `https://oeis.org/A000040/a000040.txt`
+- The python code to load this is
+```python
+
+# Load list of primes
+with open('a000040.txt', 'r') as f:
+    low_primes = f.readlines()
+
+# process list to be useable
+for i in range(len(low_primes)):
+    low_primes[i] = int(low_primes[i].split(' ')[1])
+```
+- Next generate random n-bit odd numbers and check if prime by comparing against low-level primes
+```python
+def random_number(n):
+    return random.randrange(2**(n-1)+1, 2**n - 1, 2)
+
+# Check low-level primes
+def get_low_level_prime(n):
+    while True:
+        prime_candidate = random_number(n)
+
+        for div in low_primes:
+            # check if number divides prime
+            if prime_candidate % div == 0 and div**2 <= prime_candidate:
+                break
+
+        return prime_candidate
+```
+- Then use the Miller-Rabin code as a function and create a function to generate primes
+```python
+# Perform Miller Rabin Test
+def miller_rabin(n, n_of_iters):
+    def test(n, a, t, s):
+        # x = a^s  (mod n)
+        x = pow(a, s, n)
+
+        if x == 1 or x == n - 1:
+            return True
+
+        for j in range(t - 1):
+            # x = x^2  (mod n)
+            x = pow(x, 2, n)
+
+            if x == n - 1:
+                return True
+
+        return False
+
+    # find n = 2^t * s + 1
+    n2 = n - 1
+    t = 0
+    while n2 % 2 == 0:
+        n2 /= 2
+        t += 1
+    s = int(n2)
+
+    for i in range(n_of_iters):
+        a = random.randint(1, n-1)
+        is_prime = test(n, a, t, s)
+
+        if not is_prime:
+            return False
+
+    return True
+
+
+# Get a prime number
+def get_prime(n):
+    while True:
+        prime_candidate = get_low_level_prime(n)
+
+        if miller_rabin(prime_candidate, 40):
+            return prime_candidate
+```
+
+- Our Python implementation is very slow
+- Going forward we will use the `pycrypto` library to preform this task faster
+
+## Day 3: The RSA Algorithm
+### Review
+- Prime Number Generation
+![Block Diagram](https://github.com/CamelClarkson/ACSC/blob/main/get_prime.png?raw=true)
+- Block diagram
+
+### RSA
+- [RSA](https://www.youtube.com/watch?v=Z8M2BTscoD4)
+#### Libraries and Argparse
+- Together we will write a complete implementation of the RSA algorithm
+- First import the necessary libraries and setup argparse
+```python
+import argparse
+import random
+import math
+from Crypto.Util import number
+
+PRIME_SIZE = 1024
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument(
+    '-e', '--encrypt',
+    type=str,
+    nargs=3,
+    help='Usage `rsa.py -e public_key plaintext ciphertext`'
+)
+
+parser.add_argument(
+    '-d', '--decrypt',
+    type=str,
+    nargs=3,
+    help='Usage `rsa.py -d private_key ciphertext plaintext`'
+)
+
+parser.add_argument(
+    '-g', '--generate',
+    type=str,
+    nargs=2,
+    help='Usage `rsa.py -g public_key private_key`'
+)
+
+args = parser.parse_args()
+```
+
+#### Extended Euclid Algorithm
+- We need to implement the Extended Euclid algoritm to find the inverse modulus
+```python
+def inverse_mod(e, phi):
+    """
+    For ed = 1 (mod phi)
+    Equivalent to ed + phi = gcd(e, phi)
+    """
+
+    def extended_euclid(a, b):
+        """
+        Solves ax + by = gcd(a, b)
+
+        Returns gcd(a, b), x, y
+        """
+        old_r, r = a, b
+        old_s, s = 1, 0
+        old_t, t = 0, 1
+
+        while r != 0:
+            quotient = old_r // r
+            old_r, r = r, old_r - quotient * r
+            old_s, s = s, old_s - quotient * s
+            old_t, t = r, old_t - quotient * t
+
+        return old_r, old_s, old_t
+
+    gcd, x, y = extended_euclid(e, phi)
+
+    return x
+```
+
+#### Generating Public and Private Keypairs
+- Next we need to generate the public and private keypairs
+```python
+def generate_keys():
+    p = number.getPrime(PRIME_SIZE)
+    q = number.getPrime(PRIME_SIZE)
+
+    n = p * q
+
+    # Euler's totient
+    phi = (p - 1) * (q - 1)
+
+    # Verify that e and phi(n) are coprime
+    e = random.randrange(3, phi)
+    g = math.gcd(e, phi)
+
+    while g != 1:
+        e = random.randrange(3, phi)
+        g = math.gcd(e, phi)
+
+    # Use Extended Euclid's Algorihtm to generate the private key
+    d = inverse_mod(e, phi)
+    
+    return ((e, n), (d, n))
+```
+
+#### Encryption
+- Implement the encryption portion of the RSA algorithm
+```python
+def encrypt(e, n, in_file, out_file):
+    with open(in_file, 'r') as f:
+        plaintext = f.read()
+
+    # Convert plaintext to numbers using ord to get unicode integer
+    # Use ord(char)^e   (mod n) to get ciphertext
+    cipher = [str(pow(ord(char), e, n)) for char in plaintext]
+
+    # Write ciphertext add newline to split encrypted characters
+    with open(out_file, 'w') as f:
+        f.write('\n'.join(cipher))
+```
+
+#### Decryption
+- Implement the decryption porition of the RSA algorithm
+```python
+def decrypt(d, n, in_file, out_file):
+    with open(in_file, 'r') as f:
+        ciphertext = f.readlines()
+
+    plain = [chr(pow(int(char), d, n)) for char in ciphertext]
+
+    with open(out_file, 'w') as f:
+        f.write(''.join(plain))
+```
+
+#### Putting It All Together!
+- Handle user input and call correct functions
+```python
+# Generate public and private key
+if args.generate is not None:
+    public_key, private_key = generate_keys()
+
+    # Save public and private keys
+    with open(args.generate[0], 'w') as f:
+        f.write('\n'.join([str(public_key[0]), str(public_key[1])]))
+
+    with open(args.generate[1], 'w') as f:
+        f.write('\n'.join([str(private_key[0]), str(private_key[1])]))
+
+elif args.encrypt is not None:
+    # Load public key and plaintext
+    with open(args.encrypt[0], 'r') as f:
+        e, n = f.readlines()
+
+    e = int(e)
+    n = int(n)
+
+    encrypt(e, n, args.encrypt[1], args.encrypt[2])
+
+elif args.decrypt is not None:
+    # Load private key and plaintext
+    with open(args.decrypt[0], 'r') as f:
+        d, n = f.readlines()
+
+    d = int(d)
+    n = int(n)
+
+    decrypt(d, n, args.decrypt[1], args.decrypt[2])
+```
+- Now test out your cryptosystem!
+- Ransomware [Video1](https://youtu.be/FV-HW3NYdF8)[Video2](https://youtu.be/Vkjekr6jacg)
+
+## Day 4: Cross Site Scriping (XSS) Attack
+
+### Build Basic Bootstrap Webpage with Node.js
+- Bootstrap is a tool to "quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins."
+- Create a new directory for this project and navigate to it
+- First initialize the project with node running `npm init`, note when prompted for entry point enter `app.js` NOT `index.js`
+- Install the express package via `npm install express`
+#### Setting up the app.js file
+- Create `app.js` in your project directory with the following code
+```javascript
+const express = require('express');
+const app = express();
+const http = require('http');
+const server = http.createServer(app);
+const port = 8000;
+
+// serve request files
+app.get('/', (req, res) => {
+	res.sendFile(__dirname + '/public/views/index.html');
+});
+
+// add routing code here
+
+// add socket.io code here
+
+// set server to listen to specific port
+server.listen(port, () => {
+	console.log('listening on port: ' + port);
+});
+```
+- Change the port number to one the instructors will give you
+#### Creating the HTML page
+- Now create the `public` and `public/views` sub-directories
+- Create our main HTML file `public/views/index.html`, this will be what you see when you connect to the webpage use this Boostrap based template:
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic Webpage</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device=width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://cdn.tutorialjinni.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://cdn.tutorialjinni.com/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdn.tutorialjinni.com/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1> This is a webpage! </h1>
+			</div>
+		</div>
+	</body>
+</html>
+```
+- Modify the template to include your name in the `<h1>` tag
+#### Running and Connecting to the Server
+- Run the server in the background using the command `node app.js &`
+- To see your webpage, open up your preferred web browser and navigate to `http://52.15.176.176:<your-port-number-here>`
+- Ensure that you see your web page
+- Kill the node server using the `kill` command
+
+### Intro to the XSS Attack
+- Cross site scripting attack: [video](https://www.youtube.com/watch?v=zv0kZKC6GAM)
+
+### Building a Chat Room Using Node.js and Socket.io
+- Run `npm install socket.io` to instal the socket.io plugin
+- Modify `index.html` so it contains a login portal and chat area by ading the following code
+```html
+<div class="modal fade" id="username_modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">User Login</h4>
+			</div>
+			<div class="modal-body">
+				<form onsubmit="return false;">
+					<div class="form-group">
+						<input type="text" class="form-control" id="username_field" placeholder="Enter username">
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button id="close_modal" type="button" class="btn btn-primary">Enter Chat</button>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+			<ul id="messages"></ul>
+		</div>
+	</div>
+	<div class="row bottom">
+		<div class="col-12">
+			<form role="form" onsubmit="return false;">
+				<div class="input-group">
+					<input id="message_field" class="form-control" type="text" placeholder="Enter message">
+					<div class="input-group-btn">
+							<button id="message_submit" type="button" class="btn btn-primary">Send</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+```
+- Also include our stylesheet and client side javascript (to be created) with the following to lines in the `<head>` tag in addition to including socket.io
+```html
+<script src="/socket.io/socket.io.js"></script>
+
+<link rel="stylesheet" href="/public/styles/style.css">
+<script type="text/javascript" src="/public/scripts/client.js"></script>
+```
+- Add the following stylesheet to `public/styles/style.css`
+```css
+#messages {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	white-space: nowrap;
+	font-size: 125%;
+}
+
+#messages li {
+	font-family: sans-serif;
+}
+
+/* Make each entry alternate color for easier reading */
+#messages li:nth-child(odd) {
+	background: rgb(245, 245, 245);
+}
+
+#messages: li:nth-child(even) {
+	background: rgb(200, 200, 200);
+}
+
+.bottom {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+```
+- Create the following `public/scripts/client.js` file
+```js
+$(document).ready(() => {
+	const socket = io();
+	var username = null;
+	var in_modal = true;
+
+	// get login info from modal
+	$(window).load(() => {
+		$('#username_modal').modal('show');
+	});
+
+	// once username is submitted close modal
+	$('#close_modal').on('click', () => {
+		get_username();
+		enter_chat_room();
+	});
+
+	function get_username() {
+		username = $('#username_field').val() !== '' ? $('#username_field').val() : 'anonymous';
+		$('#username_field').val('');
+	}
+
+	function enter_chat_room() {
+		if (username !== null) {
+			$('#username_modal').modal('hide');
+			in_modal = false;
+			socket.emit('init', username);
+		}
+	}
+
+	// listen for enter keypress (13)
+	$(document).keypress((event) => {
+		if (event.which === 13) {
+			if (in_modal) {
+				get_username();
+				enter_chat_room();
+			} else {
+				send_message();
+			}
+		}
+	});
+
+	// listen for send button press
+	$('#message_submit').on('click', () => {
+		send_message();
+	});
+
+	function send_message() {
+		var msg = $('#message_field').val();
+
+		if (msg !== '') {
+			$('#message_field').val('');
+
+			socket.emit('msg', {
+				username: username,
+				message: msg,
+				admin: false,
+			});
+		}
+	}
+
+	function add_message(data) {
+		var $li = data.admin ? $('<li>').append(data.message) : $('<li>').append(data.username + ': ' + data.message);
+
+		$('#messages').append($li);
+	}
+
+	// listen for broadcasts
+	socket.on('msg', (data) => {
+		add_message(data);
+	});
+
+});
+```
+
+<!-- Download and extract using `wget` and then `tar`: [public.tar.gz](https://raw.githubusercontent.com/CamelClarkson/ACSC/main/public.tar.gz) -->
+- Modify app.js so it contains socket.io handling
+```js
+const { Server } = require('socket.io');
+const io = new Server(server);
+
+// setup socket handling
+io.on('connection', (socket) => {
+	// get connected users data
+	socket.on('init', (data) => {
+		socket.username = data;
+		console.log(data + ' has joined the chat')
+	});
+
+	// send users messages
+	socket.on('msg', (data) => {
+		console.log(data.username + ': ' + data.message);
+		io.sockets.emit('msg', data);
+	});
+
+	socket.on('disconnect', () => {
+		if (socket.users !== undefined) {
+			console.log(socket.username + ' has disconnected.');
+			io.sockets.emit('msg', {
+				username: null,
+				message: socket.username + ' has disconnected.',
+				admin: true
+			});
+		}
+	});
+});
+```
+- Add routing code to serve up the CSS and JS files you created
+```js
+app.get('/public/scripts/client.js', (req, res) => {
+	res.sendFile(__dirname + '/public/scripts/client.js');
+});
+
+app.get('/public/styles/style.css', (req, res) => {
+	res.sendFile(__dirname + '/public/styles/style.css');
+});
+```
+### Demo XSS Attack
+- Note we can execute arbitrary code on every client's instance of the chatroom
+
+### Mitigating the XSS Attack
+- We need to sanitize incoming messages to make sure we don't just execute arbitrary code
+- Replace special symbols with escaped ones
+
+| Escape Character | Symbol |
+|:------|:----------------|
+|\&amp;| & |
+|\&lt;| < |
+|\&gt;|>|
+
+- To do this in `app.js` create a function called `sanitize_input` like so
+```js
+function sanitize_input(content) {
+	// add code to clean content here
+	return content;
+}
+```
+- And in the socket handling section before `io.sockets.emit('msg', data);` add the line
+```js
+data.message = sanitize_input(data.message);
+```
+- To santize code use string replace, e.g., `content = content.replace(/stuff-to-replace/g, 'replaced-string');`
+
+## Day 5: Timing Based Attacks
+- Example [video](https://www.youtube.com/watch?v=2-zQp26nbY8)
+- Use timeit library to measure execution time
+- Create a test function
+```python
+def test(n=1e10):
+	sum = 0
+	for i in range(int(n)):
+		sum += i
+	
+	return sum
+```
+- Use timeit to measure execution
+```python
+import timeit
+import numpy as np
+
+n = 1e2
+
+times = timeit.repeat(
+	stmt='test(n)',
+	setup=f'n={n!r}',
+	globals=globals(),
+	number=1000,
+	repeat=10
+)
+
+print(np.min(times))
+
+n = 1e5
+
+times = timeit.repeat(
+	stmt='test(n)',
+	setup=f'n={n!r}',
+	globals=globals(),
+	number=1000,
+	repeat=10
+)
+
+print(np.min(times))
+```
+
+### Password Verifier
+- Create a file named `password_cracker.py`
+- Create a dictionary containing a username and password
+- Create a function to the check a password character by character
+```python
+allowed_chars = string.ascii_letters + string.digits + string.punctuation
+password_database = {'jdoe': '4we1@kj&0(_5>+/r6a.<!%gFd'}
+
+def check_password(user, guess):
+    actual = password_database[user]
+    if len(guess) != len(actual):
+        return False
+
+    for i in range(len(actual)):
+        if guess[i] != actual[i]:
+             return False
+
+    return True
+```
+
+### Developing the Password Cracker
+- Create a function to generate a random string of certain length
+```python
+def random_str(length):
+    return ''.join(random.choices(allowed_chars, k=length))
+```
+- Develop a function to crack the lenght of the password using a timing based attack
+```python
+def crack_length(user, max_length=32):
+    trials = 1000
+    times = np.zeros(max_length)
+
+    for i in range(max_length):
+        i_times = timeit.repeat(
+                stmt='check_password(user, x)',
+                setup=f'user={user!r};x=random_str({i!r})',
+                globals=globals(),
+                number=trials,
+                repeat=10
+        )
+
+        times[i] = np.min(i_times)
+
+    return int(np.argmax(times))
+```
+- Next create a function to crack the password once the length is determined
+```python
+def crack_password(user, length):
+    guess = random_str(length)
+    trials = 1000
+
+    count = 0
+
+    while True:
+        i = count % length
+
+        for c in allowed_chars:
+            alt = guess[:i] + c + guess[i+1:]
+
+            alt_time = timeit.repeat(
+                stmt='check_password(user, x)',
+                setup=f'user={user!r};x={alt!r}',
+                globals=globals(),
+                number=trials,
+                repeat=10
+            )
+
+            guess_time = timeit.repeat(
+                stmt='check_password(user, x)',
+                setup=f'user={user!r};x={guess!r}',
+                globals=globals(),
+                number=trials,
+                repeat=10
+            )
+
+            if check_password(user, alt):
+                return alt
+
+            if np.min(alt_time) > np.min(guess_time):
+                guess = alt
+                print(guess)
+
+        count += 1
+```
+- Finally put it all together to crack the password
+```python
+user = 'jdoe'
+length = crack_length(user)
+print(f'Most likely length is {length}')
+password = crack_password(user, length)
+print(f'Cracked password for {user} is {password}')
+```
