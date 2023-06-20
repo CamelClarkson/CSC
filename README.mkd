@@ -28,43 +28,9 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
     - What do you expect to learn?
     - What major do you want to choose in college?
 
-### Install MobaXterm (for Windows user)
-- Install [MobaXterm](https://mobaxterm.mobatek.net/download.html) (The Free Home Edition) 
-- Watch the [MobaXterm live demo](https://mobaxterm.mobatek.net/demo.html) to see how to setup the SSH connection
-
-<!-- ### Install XQuartz (for Mac user)
-- Install [XQuartz](https://www.xquartz.org/)
-- Reboot
-  - Install [PUTTY](https://www.putty.org/) (if using Windows)
--->
-
-### Open and use the Terminal app (for Mac user)
-- [Instructions](https://www.howtogeek.com/682770/how-to-open-the-terminal-on-a-mac/)
-
-### Connect to the Server
-- Username is `<firstletter><lastname>` all in lowercase and the password is `password`, e.g., for John Doe the username is `jdoe`
-- Connect to the Linux server using SSH at this IP address: 52.15.176.176, e.g., `ssh jdoe@52.12.176.176`
-
 ### Exercise: Changing Your Password
 - Use the `passwd` command to update your password
 - Enter your old password and then your new one. **DON'T FORGET IT!**
-
-### Exercise: Finding the Secret File
-- Linux `cat <filename>` command to see the contents of file
-- Run `ls` to see the list of files in the current directory
-- Now try `ls -a` what is different?
-- Find the secret file and message of the instructors with its content on Zoom
-
-<!--
-### Intro to Virtual Machines
-  - [What is a Virtual Machine (VM)?]
-  - [Why VM?](https://www.linkedin.com/learning/learning-vmware-vsphere-6-5/why-virtual-machines)
-  - What happens when you press Power - [Boot Process](https://youtu.be/RgLMBXg5b9I)
-  - [Linux Boot Process](https://www.thegeekstuff.com/2011/02/linux-boot-process)
-  - If you want to install your own Linux Virtual Machine, here are a couple of reference links:
-     - [Reference Tutorial 1](https://www.lifewire.com/run-ubuntu-within-windows-virtualbox-2202098)
-     - [Reference Tutorial 2](https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox)
- -->
  
 ### Intro to Unix/Linux
 - [Unix history](https://youtu.be/7FjX7r5icV8)
