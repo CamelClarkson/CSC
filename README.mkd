@@ -34,7 +34,6 @@ Cyber Camp is designed to engage and encourage the students to think about the m
 ### Intro to Unix/Linux
 - What is an operating system?
 - [Unix history](https://youtu.be/7FjX7r5icV8)
-<!-- [Unix vs. Linux](https://www.tutorialspoint.com/difference-between-linux-and-unix)-->
 - [The story of Linux](https://youtu.be/5ocq6_3-nEw)
 - [How Linux is built](https://youtu.be/yVpbFMhOAwE)
 - [Difference between Linux and Unix](https://www.guru99.com/difference-unix-vs-linux.html)
