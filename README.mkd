@@ -2,52 +2,55 @@ Cyber Camp 2023
 ======================
 
 # Summary and Audience
-Cyber Camp 1.0 provides hands-on learning in the areas of networking, computer administration, malware, and basic scripting, with a security focus. The camp encourages critical thinking, applied learning, and engineering methods and reasoning. Cyber Camp 1.0 is great for those students who want to get a taste of computer/IT technician and feel what it is like to manage a computer system. The camp is geared towards students in Grades 9-12. No prior experience is required.
+Cyber Camp provides hands-on learning in the areas of networking, computer administration, malware, and basic scripting, with a security focus. The camp encourages critical thinking, applied learning, and engineering methods and reasoning. Cyber Camp is great for those students who want to get a taste of computer/IT technician and feel what it is like to manage a computer system. The camp is geared towards students in grades 9-12. No prior experience is required.
+
+Cyber Camp 2.0 is designed to engage and encourage the students to think about the more advanced computer systems and internet resources they interact with daily, from a strong security posture. The students will learn about web server, advanced scripting, and understand representative cyber-attacks and cyber defense mechanisms. The camp encourages critical thinking, applied learning, and engineering methods and reasoning. Cyber Camp 2.0 is great prep for those students who wants to further their knowledge from Cyber Camp 1.0 and looking to become a computer/IT technician and/or looking into a college degree in Computer Science, Computer Engineering, or other Computer/IT related majors!
 
 # Objective
 The objective of Cyber Camp 1.0 is to introduce and prepare students about the basic concepts in cyber security. The camp begins with the campers learning Linux operating system and Linux commands. Students will then learn how to administer a computer system, while providing user services and maintaining security.
 
 # Goals
-- Have Fun Learning
-- Get Students Interested in STEM
+- Learning how Linux systems operate
+- Understanding of different types of concepts in cybersecurity:
+	- Symmetric Encryption
+	- Public Key Cryptography and RSA
+	- Cross site scripting attacks and websecurity
+	- Timing attacks
+- Being able to think critically about software development from a security perspective
 
-# Basic Rules
+<!-- # Basic Rules
 - Be Respectful
 - Don't be a Distraction to Others' Learning
+-->
 
 # Outline
 
 ## Day 1 - Intro to Linux
 
 ### Welcome and Intro
-  - Teachers
+  - Instructors
   - Students
     - Name
-    - Grade
+    - Year
     - School
     - What do you expect to learn?
-    - What major do you want to choose in college?
-
-### Exercise: Changing Your Password
-- Use the `passwd` command to update your password
-- Enter your old password and then your new one. **DON'T FORGET IT!**
+    - What is your anticipated field of study?
  
 ### Intro to Unix/Linux
+- What is an operating system?
 - [Unix history](https://youtu.be/7FjX7r5icV8)
-- [Unix vs. Linux](https://www.tutorialspoint.com/difference-between-linux-and-unix)
+<!-- [Unix vs. Linux](https://www.tutorialspoint.com/difference-between-linux-and-unix)-->:w
 - [The story of Linux](https://youtu.be/5ocq6_3-nEw)
 - [How Linux is built](https://youtu.be/yVpbFMhOAwE)
 - [Difference between Linux and Unix](https://www.guru99.com/difference-unix-vs-linux.html)
 
 ### Linux fundamentals: Basic Commands
-  For each of the commands below (three per group), provide the following:
-   1. Commands Name
+  For each of the commands below, provide the following:
+   1. Command Name
    2. What it does
    3. One or two examples illustrating their usage
       - man
       - ls
-      - cat
-      - passwd
    - Group1:
       - cd
       - whoami
@@ -64,6 +67,7 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
       - wc
       - echo
       - w
+      - cat
 
 <!--
 - alias
@@ -94,7 +98,7 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
   - `p` to paste content in vim buffer
   - `^` navigate to beginning of line
   - `$` navigate to end of line
-- For further information see this [tutorial](https://www.openvim.com/)
+- Work through this [tutorial](https://www.openvim.com/)
 
 ### Intro to Bash Scripting
 - We can put series of commands in a script and run it
@@ -105,15 +109,36 @@ echo $id
 ```
 - We surround commands with `$(...)`
 - Variables are referenced with $, i.e., for a variable named `x` to use it we would write `$x`
+- To perform arthimatic operations use `$((<expression here>))`
+- `#!/bin/bash` tells the OS where the bash interpreter is located
+- Here is the example of a addition script
+```bash
+#!/bin/bash
 
-### Bash Scripting Assignment
-- Write a bash script named `find_home.sh` which will change the directory of the script to the **user's** home directory 
+echo "Enter a number and hit \"Enter\""
+read a
+echo "Enter another number and hit \"Enter\""
+read b
+echo "You entered $a and $b"
+c=$((a + b))
+echo "Sum is $c"
+```
+- Save this file as `add.sh`
 
-## Day 2 - Linux Systems
-### Getting Started with Linux (Continued)
+### Bash Scripting Exercise
+- Write a script to prompt the user for two numbers. Subtract the first number from the second number, i.e., `b - a`
+
+### Output redirection
 - To redirect ouput to a file use `>`, to append to a file use `>>`
-### [Access Permission](https://en.wikipedia.org/wiki/File-system_permissions)
+
+### File Permissions
+- [Access Permission](https://en.wikipedia.org/wiki/File-system_permissions)
 - [chmod command](https://www.tutorialspoint.com/unix_commands/chmod.htm)
+- What does `chmod 777 my_file` do?
+- What chmod command makes it so only the owner can read, write, and execute, while everyone else can just read and execute?
+- Make your bash script executable
+
+<!-- ## Day 2 - Linux Systems
 ### grep
 - [How To Use grep Command](https://phoenixnap.com/kb/grep-command-linux-unix-examples)
 - [A Beginner’s Guide To Grep](https://www.opensourceforu.com/2012/06/beginners-guide-gnu-grep-basics/)
@@ -122,6 +147,7 @@ echo $id
 ### Regular Expressions (regex)
 - Powerful tool for searching
 - Work through this tutorial on regex: [Regex Tutorial](http://regextutorials.com/intro.html?Basic%20symbols)
+- 
 
 ### Exercise
 - Download the `day3_data.csv` file by using `wget`, i.e., `wget https://raw.githubusercontent.com/CamelClarkson/CSC/2022/day3_data.csv` 
@@ -132,7 +158,7 @@ echo $id
 <!-- ## Day 4 - Networking
   - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4) -->
 
-### Networking
+<!-- ### Networking
 - [IP Addresses](https://youtu.be/7_-qWlvQQtY)
 - [Network Ports](https://youtu.be/uMwzsh_Dd9Y)
 - [Common Ports](http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php)
@@ -152,7 +178,7 @@ echo $id
 - SSH into partner's machine with previously created account
 -->
 
-### How to tell what doors (ports and services) are open
+<!-- ### How to tell what doors (ports and services) are open
 - netstat -lntu
 - nmap localhost
 - [nmap cheat sheet](https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/)
@@ -436,7 +462,7 @@ for i in range(10):
 - Modify fibonacci program to print out n elements of the sequence
  -->
 
-### Encryption (Public Key Cryptography)
+<!-- ### Encryption (Public Key Cryptography)
 - Use `wget` to download this [`.vimrc`](https://raw.githubusercontent.com/CamelClarkson/ACSC/main/.vimrc)
 - Intro [video](https://www.youtube.com/watch?v=AQDCe585Lnc)
 - How do we achieve this asymmetric (public) encryption?
@@ -983,7 +1009,7 @@ $(document).ready(() => {
 ```
 
 <!-- Download and extract using `wget` and then `tar`: [public.tar.gz](https://raw.githubusercontent.com/CamelClarkson/ACSC/main/public.tar.gz) -->
-- Modify app.js so it contains socket.io handling
+<!-- - Modify app.js so it contains socket.io handling
 ```js
 const { Server } = require('socket.io');
 const io = new Server(server);
