@@ -1,13 +1,8 @@
 Cyber Camp 2023
 ======================
 
-# Summary and Audience
-Cyber Camp provides hands-on learning in the areas of networking, computer administration, malware, and basic scripting, with a security focus. The camp encourages critical thinking, applied learning, and engineering methods and reasoning. Cyber Camp is great for those students who want to get a taste of computer/IT technician and feel what it is like to manage a computer system. The camp is geared towards students in grades 9-12. No prior experience is required.
-
-Cyber Camp 2.0 is designed to engage and encourage the students to think about the more advanced computer systems and internet resources they interact with daily, from a strong security posture. The students will learn about web server, advanced scripting, and understand representative cyber-attacks and cyber defense mechanisms. The camp encourages critical thinking, applied learning, and engineering methods and reasoning. Cyber Camp 2.0 is great prep for those students who wants to further their knowledge from Cyber Camp 1.0 and looking to become a computer/IT technician and/or looking into a college degree in Computer Science, Computer Engineering, or other Computer/IT related majors!
-
-# Objective
-The objective of Cyber Camp 1.0 is to introduce and prepare students about the basic concepts in cyber security. The camp begins with the campers learning Linux operating system and Linux commands. Students will then learn how to administer a computer system, while providing user services and maintaining security.
+# Summary
+Cyber Camp is designed to engage and encourage the students to think about the more advanced computer systems and internet resources they interact with daily, from a strong security posture. The students will learn about web server, advanced scripting, and understand representative cyber-attacks and cyber defense mechanisms. The camp encourages critical thinking, applied learning, and engineering methods and reasoning. Cyber Camp 2.0 is great prep for those students who are interested in becoming a computer/IT technician and/or looking into a college degree in Computer Science, Computer Engineering, or other Computer/IT related majors!
 
 # Goals
 - Learning how Linux systems operate
@@ -39,7 +34,7 @@ The objective of Cyber Camp 1.0 is to introduce and prepare students about the b
 ### Intro to Unix/Linux
 - What is an operating system?
 - [Unix history](https://youtu.be/7FjX7r5icV8)
-<!-- [Unix vs. Linux](https://www.tutorialspoint.com/difference-between-linux-and-unix)-->:w
+<!-- [Unix vs. Linux](https://www.tutorialspoint.com/difference-between-linux-and-unix)-->
 - [The story of Linux](https://youtu.be/5ocq6_3-nEw)
 - [How Linux is built](https://youtu.be/yVpbFMhOAwE)
 - [Difference between Linux and Unix](https://www.guru99.com/difference-unix-vs-linux.html)
