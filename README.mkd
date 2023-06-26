@@ -49,18 +49,16 @@ Cyber Camp is designed to engage and encourage the students to think about the m
       - cd
       - whoami
       - mkdir
+      - wc
    - Group2:
       - who
       - pwd
       - history
+      - echo
    - Group3:
       - cp
       - mv
       - rm
-   - Group4:
-      - wc
-      - echo
-      - w
       - cat
 
 <!--
