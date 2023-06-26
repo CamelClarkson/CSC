@@ -132,7 +132,7 @@ echo "Sum is $c"
 - What chmod command makes it so only the owner can read, write, and execute, while everyone else can just read and execute?
 - Make your bash script executable
 
-<!-- ## Day 2 - Linux Systems
+
 ### grep
 - [How To Use grep Command](https://phoenixnap.com/kb/grep-command-linux-unix-examples)
 - [A Beginner’s Guide To Grep](https://www.opensourceforu.com/2012/06/beginners-guide-gnu-grep-basics/)
@@ -142,7 +142,7 @@ echo "Sum is $c"
 - Powerful tool for searching
 - Work through this tutorial on regex: [Regex Tutorial](http://regextutorials.com/intro.html?Basic%20symbols)
 - 
-
+<!--
 ### Exercise
 - Download the `day3_data.csv` file by using `wget`, i.e., `wget https://raw.githubusercontent.com/CamelClarkson/CSC/2022/day3_data.csv` 
 - This spreadsheet has 4 columns, `lastname`, `firstname`, `email`, `grade`
