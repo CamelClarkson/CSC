@@ -45,21 +45,23 @@ Cyber Camp is designed to engage and encourage the students to think about the m
    3. One or two examples illustrating their usage
       - man
       - ls
-   - Group1:
+   - Group 1:
       - cd
       - whoami
       - mkdir
-      - wc
-   - Group2:
-      - who
+   - Group 2:
       - pwd
       - history
       - echo
-   - Group3:
+   - Group 3:
       - cp
       - mv
       - rm
-      - cat
+- Group 4:
+	-  wc
+	- alias
+   	- cat 
+
 
 <!--
 - alias
