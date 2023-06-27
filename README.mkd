@@ -184,6 +184,72 @@ for student, grade in grades:
    
   print(student + ' has grade ' + letter_grade)
   ```
+
+### Python Script on Fibonacci sequence
+- [Fibonacci sequence](https://youtu.be/v6PTrc0z4w4) is a famous recurrence relationship that occurs often in nature
+- The first two elements are `f[0] = 0` and `f[1] = 1`
+- Then for any `n > 1` we have `f[n] = f[n-1] + f[n-2]`
+- We can write a recurisive python function for this
+```python
+
+n = 10
+
+# Fibonacci function
+def fib(n):
+    # conditionals in python, == checks for equality, = is for assignment
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+
+
+print(fib(n))
+```
+- Save the script as `fib.py`
+- To run the script enter `python3 fib.py`
+- Currently, you have to manually edit the script to change values for `n`
+- What if you could pass command line arguments?
+- Use `argparse` see the example code below
+```python
+# use the import keyword to import additional libraries!
+import argparse
+
+parser = argparse.ArgumentParser()
+
+# add argument and doc string to appear if -h or --help is entered
+parser.add_argument(
+    'n',
+    type=int,
+    help='n-th element of Fibonacci sequence to compute'
+)
+
+# grab arguments
+args = parser.parse_args()
+
+
+# Fibonacci function
+def fib(n):
+    # conditionals in python, == checks for equality, = is for assignment
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+
+
+print(fib(args.n))
+```
+- For loops repeat an action
+```python
+# prints 1 ... 10
+for i in range(10):
+	print(i)
+```
+- Modify fibonacci program to print out n elements of the sequence
+
 ### Encryption
 - Goal is to take plaintext, i.e. content, and obsfucate in a way (encryption) that only some one with the key can recover the plaintext (decryption)
 - Watch this intro [video](https://www.youtube.com/watch?v=fNC3jCCGJ0o)
@@ -392,71 +458,6 @@ app.listen(port, function() {
 - [Post Class Survey](https://forms.gle/i3LoSjwZvFU1KZAZA)
 -->
 
-<!-- #### Python Script on Fibonacci sequence
-- [Fibonacci sequence](https://youtu.be/v6PTrc0z4w4) is a famous recurrence relationship that occurs often in nature
-- The first two elements are `f[0] = 0` and `f[1] = 1`
-- Then for any `n > 1` we have `f[n] = f[n-1] + f[n-2]`
-- We can write a recurisive python function for this
-```python
-
-n = 10
-
-# Fibonacci function
-def fib(n):
-    # conditionals in python, == checks for equality, = is for assignment
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        return fib(n-1) + fib(n-2)
-
-
-print(fib(n))
-```
-- Save the script as `fib.py`
-- To run the script enter `python3 fib.py`
-- Currently, you have to manually edit the script to change values for `n`
-- What if you could pass command line arguments?
-- Use `argparse` see the example code below
-```python
-# use the import keyword to import additional libraries!
-import argparse
-
-parser = argparse.ArgumentParser()
-
-# add argument and doc string to appear if -h or --help is entered
-parser.add_argument(
-    'n',
-    type=int,
-    help='n-th element of Fibonacci sequence to compute'
-)
-
-# grab arguments
-args = parser.parse_args()
-
-
-# Fibonacci function
-def fib(n):
-    # conditionals in python, == checks for equality, = is for assignment
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        return fib(n-1) + fib(n-2)
-
-
-print(fib(args.n))
-```
-- For loops repeat an action
-```python
-# prints 1 ... 10
-for i in range(10):
-	print(i)
-```
-- Modify fibonacci program to print out n elements of the sequence
- -->
 
 <!-- ### Encryption (Public Key Cryptography)
 - Use `wget` to download this [`.vimrc`](https://raw.githubusercontent.com/CamelClarkson/ACSC/main/.vimrc)
