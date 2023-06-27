@@ -346,7 +346,166 @@ with open(args.file, 'w') as f:
         out_text = decrypt(in_text)
 
     f.write(out_text)
-``` 
+```
+
+### Encryption (Public Key Cryptography)
+- Use `wget` to download this [`.vimrc`](https://raw.githubusercontent.com/CamelClarkson/ACSC/main/.vimrc)
+- Intro [video](https://www.youtube.com/watch?v=AQDCe585Lnc)
+- How do we achieve this asymmetric (public) encryption?
+- One way is through prime numbers
+
+### Introduction to Prime Numbers
+- What is a prime number?
+- There are no efficient algorithms for finding primes
+- Why might this be useful for security? [Video](https://youtu.be/56fa8Jz-FQQ)
+
+### Miller-Rabin Primality Test
+- [Algorithm](https://www.youtube.com/watch?v=p5S0C8oKpsM) to test if an integer is prime developed by Dr. Gary Miller and Dr. Michael Rain in the later 1970s
+- Here is a template to get started
+```python
+import argparse
+import random
+
+# Parse input arguments
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    'n',
+    type=int,
+    help='Odd integer larger than 2'
+)
+parser.add_argument(
+    '-k', '--n_of_iters',
+    type=int,
+    default=40,
+    help='Number of iterations of Miller-Rabin test'
+)
+
+args = parser.parse_args()
+
+# check if valid input
+assert not(args.n % 2 == 0 or args.n <= 2), "Not a valid integer!"
+assert args.n_of_iters > 0, "Not a valid number of iterations!"
+
+
+def test(n, a, t, s):
+    # x = a^s  (mod n)
+    x = pow(a, s, n)
+
+    if x == 1 or x == n - 1:
+        return True
+
+    for j in range(t - 1):
+        # x = x^2  (mod n)
+        x = pow(x, 2, n)
+
+        if x == n - 1:
+            return True
+
+    return False
+
+
+# find n = 2^t * s + 1
+n = args.n - 1
+t = 0
+while n % 2 == 0:
+    n /= 2
+    t += 1
+s = int(n)
+
+for i in range(args.n_of_iters):
+    a = random.randint(1, args.n-1)
+    is_prime = test(args.n, a, t, s)
+
+    if not is_prime:
+        print('Composite')
+        exit()
+
+print('Probably Prime')
+```
+
+### Create Two Random Primes
+- Two primality tests
+	1. Check against low level primes
+	2. Use Miller-Rabin
+- Use `wget` to download list of first 100000 primes from `https://oeis.org/A000040/a000040.txt`
+- The python code to load this is
+```python
+
+# Load list of primes
+with open('a000040.txt', 'r') as f:
+    low_primes = f.readlines()
+
+# process list to be useable
+for i in range(len(low_primes)):
+    low_primes[i] = int(low_primes[i].split(' ')[1])
+```
+- Next generate random n-bit odd numbers and check if prime by comparing against low-level primes
+```python
+def random_number(n):
+    return random.randrange(2**(n-1)+1, 2**n - 1, 2)
+
+# Check low-level primes
+def get_low_level_prime(n):
+    while True:
+        prime_candidate = random_number(n)
+
+        for div in low_primes:
+            # check if number divides prime
+            if prime_candidate % div == 0 and div**2 <= prime_candidate:
+                break
+
+        return prime_candidate
+```
+- Then use the Miller-Rabin code as a function and create a function to generate primes
+```python
+# Perform Miller Rabin Test
+def miller_rabin(n, n_of_iters):
+    def test(n, a, t, s):
+        # x = a^s  (mod n)
+        x = pow(a, s, n)
+
+        if x == 1 or x == n - 1:
+            return True
+
+        for j in range(t - 1):
+            # x = x^2  (mod n)
+            x = pow(x, 2, n)
+
+            if x == n - 1:
+                return True
+
+        return False
+
+    # find n = 2^t * s + 1
+    n2 = n - 1
+    t = 0
+    while n2 % 2 == 0:
+        n2 /= 2
+        t += 1
+    s = int(n2)
+
+    for i in range(n_of_iters):
+        a = random.randint(1, n-1)
+        is_prime = test(n, a, t, s)
+
+        if not is_prime:
+            return False
+
+    return True
+
+
+# Get a prime number
+def get_prime(n):
+    while True:
+        prime_candidate = get_low_level_prime(n)
+
+        if miller_rabin(prime_candidate, 40):
+            return prime_candidate
+```
+
+- Our Python implementation is very slow
+- Going forward we will use the `pycrypto` library to preform this task faster
+
 
 <!--
 ### Exercise
