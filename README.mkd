@@ -141,64 +141,8 @@ echo "Sum is $c"
 ### Regular Expressions (regex)
 - Powerful tool for searching
 - Work through this tutorial on regex: [Regex Tutorial](http://regextutorials.com/intro.html?Basic%20symbols)
-- 
-<!--
-### Exercise
-- Download the `day3_data.csv` file by using `wget`, i.e., `wget https://raw.githubusercontent.com/CamelClarkson/CSC/2022/day3_data.csv` 
-- This spreadsheet has 4 columns, `lastname`, `firstname`, `email`, `grade`
-- Write a command that returns all the entries of students who had an `A` for their `grade`
-- Write a command that returns only students whose `lastname` begins with A-L and `grade` is B or higher
 
-<!-- ## Day 4 - Networking
-  - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4) -->
-
-<!-- ### Networking
-- [IP Addresses](https://youtu.be/7_-qWlvQQtY)
-- [Network Ports](https://youtu.be/uMwzsh_Dd9Y)
-- [Common Ports](http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php)
-- [ifconfig](https://goinbigdata.com/demystifying-ifconfig-and-network-interfaces-in-linux/)
-
-#### Insecure Connection
-- Telnet, FTP, [RLogin/Rsh](https://sourcedaddy.com/networking/rlogin-rsh-and-rcp.html)
-
-#### Secure Connection
-- [SSH](https://youtu.be/v_cVEpESG3g) 
-- service ssh status
-
-<!--
-- /etc/ssh/sshd\_config 
-- [SSH Install](https://youtu.be/0KXZ6GnVza8)
-- [SSH Keys](https://www.youtube.com/watch?v=EuIYabZS3ow)
-- SSH into partner's machine with previously created account
--->
-
-<!-- ### How to tell what doors (ports and services) are open
-- netstat -lntu
-- nmap localhost
-- [nmap cheat sheet](https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/)
-
-### How to detect if someone is on your machine?
-- w
-- who
-- lastlog
-
-### How to kill a process
-- ps
-- kill
-- Put commands in background with `&`
-- wget `forever`
-- wget https://raw.githubusercontent.com/camel-clarkson/CSC/CSC2021s/script/forever
-- chmod of the file property
-- Run `forever` in background
-- Find `forever`'s pid using `ps`
-- Kill `forever` with the `kill` command
-- 
-### Malware
-- [Malware](https://youtu.be/juw6sPEGuEk)
-- [Virus vs Worm vs Trojan Horse](https://youtu.be/y8a3QoTg4VQ)
-- [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
-
-## Day 3 - Introduction to Python and Encryption
+## Day 2 - Introduction to Python and Encryption
 
 ### Python
 - Python is a high-level interpreted language which is used for many things from web developement to scientific computing
@@ -336,7 +280,65 @@ with open(args.file, 'w') as f:
         out_text = decrypt(in_text)
 
     f.write(out_text)
-```
+``` 
+
+<!--
+### Exercise
+- Download the `day3_data.csv` file by using `wget`, i.e., `wget https://raw.githubusercontent.com/CamelClarkson/CSC/2022/day3_data.csv` 
+- This spreadsheet has 4 columns, `lastname`, `firstname`, `email`, `grade`
+- Write a command that returns all the entries of students who had an `A` for their `grade`
+- Write a command that returns only students whose `lastname` begins with A-L and `grade` is B or higher
+
+<!-- ## Day 4 - Networking
+  - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4) -->
+
+<!-- ### Networking
+- [IP Addresses](https://youtu.be/7_-qWlvQQtY)
+- [Network Ports](https://youtu.be/uMwzsh_Dd9Y)
+- [Common Ports](http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php)
+- [ifconfig](https://goinbigdata.com/demystifying-ifconfig-and-network-interfaces-in-linux/)
+
+#### Insecure Connection
+- Telnet, FTP, [RLogin/Rsh](https://sourcedaddy.com/networking/rlogin-rsh-and-rcp.html)
+
+#### Secure Connection
+- [SSH](https://youtu.be/v_cVEpESG3g) 
+- service ssh status
+
+<!--
+- /etc/ssh/sshd\_config 
+- [SSH Install](https://youtu.be/0KXZ6GnVza8)
+- [SSH Keys](https://www.youtube.com/watch?v=EuIYabZS3ow)
+- SSH into partner's machine with previously created account
+-->
+
+<!-- ### How to tell what doors (ports and services) are open
+- netstat -lntu
+- nmap localhost
+- [nmap cheat sheet](https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/)
+
+### How to detect if someone is on your machine?
+- w
+- who
+- lastlog
+
+### How to kill a process
+- ps
+- kill
+- Put commands in background with `&`
+- wget `forever`
+- wget https://raw.githubusercontent.com/camel-clarkson/CSC/CSC2021s/script/forever
+- chmod of the file property
+- Run `forever` in background
+- Find `forever`'s pid using `ps`
+- Kill `forever` with the `kill` command
+- 
+### Malware
+- [Malware](https://youtu.be/juw6sPEGuEk)
+- [Virus vs Worm vs Trojan Horse](https://youtu.be/y8a3QoTg4VQ)
+- [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
+
+
 
 <!--## Day 5 - Make Your Own Website and Server!
 <!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY) -->
