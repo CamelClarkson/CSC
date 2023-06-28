@@ -683,6 +683,7 @@ elif args.decrypt is not None:
 
 #### Insecure Connection
 - Telnet, FTP, [RLogin/Rsh](https://sourcedaddy.com/networking/rlogin-rsh-and-rcp.html)
+-->
 
 #### Secure Connection
 - [SSH](https://youtu.be/v_cVEpESG3g) 
