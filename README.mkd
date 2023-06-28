@@ -732,7 +732,7 @@ elif args.decrypt is not None:
 var express = require('express');
 var app = express();
 // specify port number
-var port = 8000;
+var port = 6000;
 
 // Handle request to serve main file
 app.get('/', function(req, res) {
@@ -748,9 +748,8 @@ app.listen(port, function() {
         console.log('Server on port: ' + port);
 });
 ```
-- Change the port number to one the instructors will give you
 - Run the server in the background using the command `node app.js &`
-- To see your webpage, open up your preferred web browser and navigate to `http://3.12.96.179:<your-port-number-here>`
+- To see your webpage, open up your preferred web browser and navigate to `localhost:6000`
 - Ensure that you see your web page
 - Kill the node server using `kill`
 
