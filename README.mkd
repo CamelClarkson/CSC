@@ -573,7 +573,7 @@ def inverse_mod(e, phi):
         while r != 0:
             quotient = old_r // r
             old_r, r = r, old_r - quotient * r
-            old_s, s = s, old_s - quotient * s
+            old_s, s = s, (old_s - quotient * s) % b
             old_t, t = r, old_t - quotient * t
 
         return old_r, old_s, old_t
