@@ -674,11 +674,50 @@ elif args.decrypt is not None:
 ```
 - Now test out your cryptosystem!
 
-### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)
+<!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)-->
+<!-- ### Networking
+- [IP Addresses](https://youtu.be/7_-qWlvQQtY)
+- [Network Ports](https://youtu.be/uMwzsh_Dd9Y)
+- [Common Ports](http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php)
+- [ifconfig](https://goinbigdata.com/demystifying-ifconfig-and-network-interfaces-in-linux/)
+
+#### Insecure Connection
+- Telnet, FTP, [RLogin/Rsh](https://sourcedaddy.com/networking/rlogin-rsh-and-rcp.html)
+
+#### Secure Connection
+- [SSH](https://youtu.be/v_cVEpESG3g) 
+
+<!--
+- /etc/ssh/sshd\_config 
+- [SSH Install](https://youtu.be/0KXZ6GnVza8)
+- [SSH Keys](https://www.youtube.com/watch?v=EuIYabZS3ow)
+- SSH into partner's machine with previously created account
+-->
+
+<!-- ### How to tell what doors (ports and services) are open
+- netstat -lntu
+- nmap localhost
+- [nmap cheat sheet](https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/)
+
+### How to detect if someone is on your machine?
+- w
+- who
+- lastlog
+
+### How to kill a process
+- ps
+- kill
+- Put commands in background with `&`
+- wget `forever`
+- wget https://raw.githubusercontent.com/camel-clarkson/CSC/CSC2021s/script/forever
+- chmod of the file property
+- Run `forever` in background
+- Find `forever`'s pid using `ps`
+- Kill `forever` with the `kill` commandj
+-->
 
 ### HTML5, CSS, and Javascript
 - How does the web work? [video](https://www.youtube.com/watch?v=keo0dglCj7I)
-- Cross site scripting attack: [video](https://www.youtube.com/watch?v=zv0kZKC6GAM)
 - Create a new directory for this project and navigate to it
 - Download `public.tar.gz` from this github repo
 - Use the `tar` command to extract the conents and use the `man` command to figure out what flags to use
