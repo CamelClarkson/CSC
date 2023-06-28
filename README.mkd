@@ -675,10 +675,10 @@ elif args.decrypt is not None:
 - Now test out your cryptosystem!
 
 <!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)-->
-<!-- ### Networking
+### Networking
 - [IP Addresses](https://youtu.be/7_-qWlvQQtY)
 - [Network Ports](https://youtu.be/uMwzsh_Dd9Y)
-- [Common Ports](http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php)
+<!-- - [Common Ports](http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php)
 - [ifconfig](https://goinbigdata.com/demystifying-ifconfig-and-network-interfaces-in-linux/)
 
 #### Insecure Connection
@@ -686,6 +686,7 @@ elif args.decrypt is not None:
 
 #### Secure Connection
 - [SSH](https://youtu.be/v_cVEpESG3g) 
+- SSH into a partner's machine
 
 <!--
 - /etc/ssh/sshd\_config 
@@ -697,7 +698,7 @@ elif args.decrypt is not None:
 <!-- ### How to tell what doors (ports and services) are open
 - netstat -lntu
 - nmap localhost
-- [nmap cheat sheet](https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/)
+- [nmap cheat sheet](https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/) -->
 
 ### How to detect if someone is on your machine?
 - w
@@ -714,7 +715,6 @@ elif args.decrypt is not None:
 - Run `forever` in background
 - Find `forever`'s pid using `ps`
 - Kill `forever` with the `kill` commandj
--->
 
 ### HTML5, CSS, and Javascript
 - How does the web work? [video](https://www.youtube.com/watch?v=keo0dglCj7I)
