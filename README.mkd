@@ -879,8 +879,9 @@ server.listen(port, () => {
 - To see your webpage, open up your preferred web browser and navigate to `http://52.15.176.176:<your-port-number-here>`
 - Ensure that you see your web page
 - Kill the node server using the `kill` command
+-->
 
-## Day 5 - XXS Attacks and Timing Attacks
+## Day 4 - XXS Attacks and Timing Attacks
 - Cross site scripting attack: [video](https://www.youtube.com/watch?v=zv0kZKC6GAM)
 
 ### Building a Chat Room Using Node.js and Socket.io
@@ -1040,7 +1041,8 @@ $(document).ready(() => {
 ```
 
 <!-- Download and extract using `wget` and then `tar`: [public.tar.gz](https://raw.githubusercontent.com/CamelClarkson/ACSC/main/public.tar.gz) -->
-<!-- - Modify app.js so it contains socket.io handling
+
+- Modify app.js so it contains socket.io handling
 ```js
 const { Server } = require('socket.io');
 const io = new Server(server);
