@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic Webpage</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device=width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://cdn.tutorialjinni.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://cdn.tutorialjinni.com/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdn.tutorialjinni.com/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <script type="text/javascript" src="public/js/scripts.js"></script>
+
+	</head>
+
+	<body>
+        <div class="modal fade" id="username_modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">User Login</h4>
+			</div>
+			<div class="modal-body">
+				<form onsubmit="return false;">
+					<div class="form-group">
+						<input type="text" class="form-control" id="username_field" placeholder="Enter username">
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button id="close_modal" type="button" class="btn btn-primary">Enter Chat</button>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+			<ul id="messages"></ul>
+		</div>
+	</div>
+	<div class="row bottom">
+		<div class="col-12">
+			<form role="form" onsubmit="return false;">
+				<div class="input-group">
+					<input id="message_field" class="form-control" type="text" placeholder="Enter message">
+					<div class="input-group-btn">
+							<button id="message_submit" type="button" class="btn btn-primary">Send</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	</body>
+</html>
