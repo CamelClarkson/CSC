@@ -105,7 +105,7 @@ echo $id
 - Variables are referenced with $, i.e., for a variable named `x` to use it we would write `$x`
 - To perform arthimatic operations use `$((<expression here>))`
 - `#!/bin/bash` tells the OS where the bash interpreter is located
-- Here is the example of a addition script
+- Here is the example of an addition script
 ```bash
 #!/bin/bash
 
