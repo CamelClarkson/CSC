@@ -356,8 +356,7 @@ with open(args.file, 'w') as f:
 
 ### Introduction to Prime Numbers
 - What is a prime number?
-- There are no efficient algorithms for finding primes
-- Why might this be useful for security? [Video](https://youtu.be/56fa8Jz-FQQ)
+- Why might primes be useful for security? [Video](https://youtu.be/56fa8Jz-FQQ)
 
 ### Miller-Rabin Primality Test
 - [Algorithm](https://www.youtube.com/watch?v=p5S0C8oKpsM) to test if an integer is prime developed by Dr. Gary Miller and Dr. Michael Rain in the later 1970s
@@ -504,7 +503,7 @@ def get_prime(n):
 ```
 
 - Our Python implementation is very slow
-- Going forward we will use the `pycrypto` library to preform this task faster
+- Going forward we will use the `PyCryptodome` library to preform this task faster
 
 ## Day 3: The RSA Algorithm and Running a Webserver
 ### Review
@@ -515,6 +514,7 @@ def get_prime(n):
 ### RSA
 - [RSA](https://www.youtube.com/watch?v=Z8M2BTscoD4)
 #### Libraries and Argparse
+- Install crypto library `pip install pycryptodome`
 - Together we will write a complete implementation of the RSA algorithm
 - First import the necessary libraries and setup argparse
 ```python
