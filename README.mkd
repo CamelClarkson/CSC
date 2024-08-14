@@ -360,6 +360,8 @@ with open(args.file, 'w') as f:
 
 ### Miller-Rabin Primality Test
 - [Algorithm](https://www.youtube.com/watch?v=p5S0C8oKpsM) to test if an integer is prime developed by Dr. Gary Miller and Dr. Michael Rain in the later 1970s
+
+<!--
 - Here is a template to get started
 ```python
 import argparse
@@ -503,13 +505,18 @@ def get_prime(n):
 ```
 
 - Our Python implementation is very slow
-- Going forward we will use the `PyCryptodome` library to preform this task faster
+-->
+
+- Going forward we will use the `PyCryptodome` library to generate prime numbers
 
 ## Day 3: The RSA Algorithm and Running a Webserver
+
+<!--
 ### Review
 - Prime Number Generation
 ![Block Diagram](https://github.com/CamelClarkson/ACSC/blob/main/get_prime.png?raw=true)
 - Block diagram
+-->
 
 ### RSA
 - [RSA](https://www.youtube.com/watch?v=Z8M2BTscoD4)
