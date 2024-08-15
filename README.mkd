@@ -728,7 +728,7 @@ elif args.decrypt is not None:
 ### HTML5, CSS, and Javascript
 - How does the web work? [video](https://www.youtube.com/watch?v=keo0dglCj7I)
 - Create a new directory for this project and navigate to it
-- Download `public.tar.gz` from this github repo
+- Download `public.tar.gz` from this github repo (not using wget, but download directly from the github page)
 - Use the `tar` command to extract the conents and use the `man` command to figure out what flags to use
 
 <!--
