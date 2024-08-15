@@ -795,7 +795,48 @@ elif args.decrypt is not None:
 - Create script to kill the node server **you** launched
 - Hint, what does the following command do? `ps aux | grep -E "$me.*[0-9][[:space:]]+node app.js" | tr -s ' '| cut -d ' ' -f 2`, where `$me` is variable containing your username. How does it work?
 
-<!-- - Ransomware [Video1](https://youtu.be/FV-HW3NYdF8)[Video2](https://youtu.be/Vkjekr6jacg)
+<!-- - Ransomware [Video1](https://youtu.be/FV-HW3NYdF8)[Video2](https://youtu.be/Vkjekr6jacg) 
+
+#### Running and Connecting to the Server
+- Run the server in the background using the command `node app.js &`
+- To see your webpage, open up your preferred web browser and navigate to `http://52.15.176.176:<your-port-number-here>`
+- Ensure that you see your web page
+- Kill the node server using the `kill` command -->
+
+## Day 4 - Running a Web Server and XXS Attacks
+
+<!-- ### HTML5, CSS, and Javascript (continued)
+- The contents of the `public.tar.gz` file contain all the HTML, CSS, and client-side JS for you website
+- The main html file is located at `public/index.html`
+- Customize your `index.html` to include your name somewhere on the page (hint look for either a `<h1>` or `<h2>` tag)
+- Install the express package with `npm install express` (at the same level as your `public` folder, not within the `public` folder)
+- Create `app.js` in your project directory (at the same level as your `public` folder, not within the `public` folder)
+- Add the following code to your `app.js` file
+```js
+// Import express package
+var express = require('express');
+var app = express();
+// specify port number
+var port = 6000;
+
+// Handle request to serve main file
+app.get('/', function(req, res) {
+        // __dirname is the working directory of the project
+        res.sendFile(__dirname + '/public/index.html');
+});
+
+// allow the server to serve content from public directory
+app.use(express.static('public'));
+
+// Set server to listen to `port`
+app.listen(port, function() {
+        console.log('Server on port: ' + port);
+});
+```
+- Run the server in the background using the command `node app.js &`
+- To see your webpage, open up your preferred web browser and navigate to `localhost:6000`
+- Ensure that you see your web page
+- Kill the node server using `kill` -->
 
 ### Build Basic Bootstrap Webpage with Node.js
 - Bootstrap is a tool to "quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins."
@@ -851,47 +892,7 @@ server.listen(port, () => {
 </html>
 ```
 - Modify the template to include your name in the `<h1>` tag
-#### Running and Connecting to the Server
-- Run the server in the background using the command `node app.js &`
-- To see your webpage, open up your preferred web browser and navigate to `http://52.15.176.176:<your-port-number-here>`
-- Ensure that you see your web page
-- Kill the node server using the `kill` command
--->
 
-## Day 4 - Running a Web Server and XXS Attacks
-
-### HTML5, CSS, and Javascript (continued)
-- The contents of the `public.tar.gz` file contain all the HTML, CSS, and client-side JS for you website
-- The main html file is located at `public/index.html`
-- Customize your `index.html` to include your name somewhere on the page (hint look for either a `<h1>` or `<h2>` tag)
-- Install the express package with `npm install express` (at the same level as your `public` folder, not within the `public` folder)
-- Create `app.js` in your project directory (at the same level as your `public` folder, not within the `public` folder)
-- Add the following code to your `app.js` file
-```js
-// Import express package
-var express = require('express');
-var app = express();
-// specify port number
-var port = 6000;
-
-// Handle request to serve main file
-app.get('/', function(req, res) {
-        // __dirname is the working directory of the project
-        res.sendFile(__dirname + '/public/index.html');
-});
-
-// allow the server to serve content from public directory
-app.use(express.static('public'));
-
-// Set server to listen to `port`
-app.listen(port, function() {
-        console.log('Server on port: ' + port);
-});
-```
-- Run the server in the background using the command `node app.js &`
-- To see your webpage, open up your preferred web browser and navigate to `localhost:6000`
-- Ensure that you see your web page
-- Kill the node server using `kill`
 
 ### Building a Chat Room Using Node.js and Socket.io
 - Run `npm install socket.io` to instal the socket.io plugin
