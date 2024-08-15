@@ -510,7 +510,7 @@ def get_prime(n):
 
 - Going forward we will use the `PyCryptodome` library to generate prime numbers
 
-## Day 3: The RSA Algorithm and Running a Webserver
+## Day 3: The RSA Algorithm and Networking
 
 <!--
 ### Review
@@ -858,7 +858,7 @@ server.listen(port, () => {
 - Kill the node server using the `kill` command
 -->
 
-## Day 4 - XXS Attacks and Timing Attacks
+## Day 4 - Running a Web Server and XXS Attacks
 
 ### HTML5, CSS, and Javascript (continued)
 - The contents of the `public.tar.gz` file contain all the HTML, CSS, and client-side JS for you website
