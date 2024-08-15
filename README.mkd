@@ -893,8 +893,6 @@ app.listen(port, function() {
 - Ensure that you see your web page
 - Kill the node server using `kill`
 
-- Cross site scripting attack: [video](https://www.youtube.com/watch?v=zv0kZKC6GAM)
-
 ### Building a Chat Room Using Node.js and Socket.io
 - Run `npm install socket.io` to instal the socket.io plugin
 - Modify `index.html` so it contains a login portal and chat area by ading the following code
@@ -1096,6 +1094,7 @@ app.get('/public/styles/style.css', (req, res) => {
 ```
 ### Demo XSS Attack
 - Note we can execute arbitrary code on every client's instance of the chatroom
+- Cross site scripting attack: [video](https://www.youtube.com/watch?v=zv0kZKC6GAM)
 
 ### Mitigating the XSS Attack
 - We need to sanitize incoming messages to make sure we don't just execute arbitrary code
