@@ -864,8 +864,8 @@ server.listen(port, () => {
 - The contents of the `public.tar.gz` file contain all the HTML, CSS, and client-side JS for you website
 - The main html file is located at `public/index.html`
 - Customize your `index.html` to include your name somewhere on the page (hint look for either a `<h1>` or `<h2>` tag)
-- Install the express package with `npm install express`
-- Create `app.js` in your project directory
+- Install the express package with `npm install express` (at the same level as your `public` folder, not wihin the `public` folder)
+- Create `app.js` in your project directory (at the same level as your `public` folder, not wihin the `public` folder)
 - Add the following code to your `app.js` file
 ```js
 // Import express package
