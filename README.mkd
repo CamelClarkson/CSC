@@ -58,7 +58,7 @@ Cyber Camp is designed to engage and encourage the students to think about the m
       - mv
       - rm
 - Group 4:
-	-  wc
+	- wc
 	- alias
    	- cat 
 
@@ -1124,7 +1124,7 @@ data.message = sanitize_input(data.message);
 - [Malware](https://youtu.be/juw6sPEGuEk)
 - [Virus vs Worm vs Trojan Horse](https://youtu.be/y8a3QoTg4VQ)
 - [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
-- Ransomware [Video1](https://youtu.be/FV-HW3NYdF8)[Video2](https://youtu.be/Vkjekr6jacg)
+- Ransomware [Video1](https://youtu.be/FV-HW3NYdF8)  [Video2](https://youtu.be/Vkjekr6jacg)
 
 ## Day 5 - Timing Based Attacks
 - Example [video](https://www.youtube.com/watch?v=2-zQp26nbY8)
