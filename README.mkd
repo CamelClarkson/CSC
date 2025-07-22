@@ -1,4 +1,4 @@
-Cyber Camp 2024
+Cyber Camp 2025
 ======================
 
 # Summary
@@ -802,7 +802,12 @@ elif args.decrypt is not None:
 - To see your webpage, open up your preferred web browser and navigate to `http://52.15.176.176:<your-port-number-here>`
 - Ensure that you see your web page
 - Kill the node server using the `kill` command -->
-
+  
+### Malware
+- [Malware](https://youtu.be/juw6sPEGuEk)
+- [Virus vs Worm vs Trojan Horse](https://youtu.be/y8a3QoTg4VQ)
+- [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
+- Ransomware [Video1](https://youtu.be/FV-HW3NYdF8)  [Video2](https://youtu.be/Vkjekr6jacg)
 ## Day 4 - Running a Web Server and XXS Attacks
 
 <!-- ### HTML5, CSS, and Javascript (continued)
@@ -892,7 +897,8 @@ server.listen(port, () => {
 </html>
 ```
 - Modify the template to include your name in the `<h1>` tag
-
+- Run `node app.js`
+- Open web browser and enter `localhost:PORT_NUMBER` in the address
 
 ### Building a Chat Room Using Node.js and Socket.io
 - Run `npm install socket.io` to instal the socket.io plugin
@@ -1120,12 +1126,7 @@ data.message = sanitize_input(data.message);
 ```
 - To santize code use string replace, e.g., `content = content.replace(/stuff-to-replace/g, 'replaced-string');`
 
-  
-### Malware
-- [Malware](https://youtu.be/juw6sPEGuEk)
-- [Virus vs Worm vs Trojan Horse](https://youtu.be/y8a3QoTg4VQ)
-- [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
-- Ransomware [Video1](https://youtu.be/FV-HW3NYdF8)  [Video2](https://youtu.be/Vkjekr6jacg)
+
 
 ## Day 5 - Timing Based Attacks
 - Example [video](https://www.youtube.com/watch?v=2-zQp26nbY8)
