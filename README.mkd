@@ -7,10 +7,10 @@ Cyber Camp is designed to engage and encourage the students to think about the m
 # Goals
 - Learning how Linux systems operate
 - Understanding of different types of concepts in cybersecurity:
-	- Symmetric Encryption
-	- Public Key Cryptography and RSA
+	- Encryption
+   	- Basic networking & firewall
 	- Cross site scripting attacks and websecurity
-	- Timing attacks
+	- Timing side channel attacks
 - Being able to think critically about software development from a security perspective
 
 <!-- # Basic Rules
@@ -132,6 +132,16 @@ echo "Sum is $c"
 - What chmod command makes it so only the owner can read, write, and execute, while everyone else can just read and execute?
 - Make your bash script executable
 
+### How to kill a process
+- ps
+- kill
+- Put commands in background with `&`
+- wget `forever`
+- wget https://raw.githubusercontent.com/CamelClarkson/CSC/refs/heads/2025/script/forever
+- chmod of the file property
+- Run `forever` in background
+- Find `forever`'s pid using `ps`
+- Kill `forever` with the `kill` commandj
 
 ### grep
 - [How To Use grep Command](https://phoenixnap.com/kb/grep-command-linux-unix-examples)
@@ -351,17 +361,17 @@ with open(args.file, 'w') as f:
 
 ### Encryption (Public Key Cryptography)
 - Use `wget` to download this [`.vimrc`](https://raw.githubusercontent.com/CamelClarkson/ACSC/main/.vimrc)
-- Intro [video](https://www.youtube.com/watch?v=AQDCe585Lnc)
+- Symmetric & Asymmetric encryption [video](https://www.youtube.com/watch?v=AQDCe585Lnc)
 - How do we achieve this asymmetric (public) encryption?
 - One way is through prime numbers
 
 ### Introduction to Prime Numbers
 - What is a prime number?
 - Why might primes be useful for security? [Video](https://youtu.be/56fa8Jz-FQQ)
-
+<!--
 ### Miller-Rabin Primality Test
 - [Algorithm](https://www.youtube.com/watch?v=p5S0C8oKpsM) to test if an integer is prime developed by Dr. Gary Miller and Dr. Michael Rain in the later 1970s
-
+-->
 <!--
 - Here is a template to get started
 ```python
@@ -507,10 +517,10 @@ def get_prime(n):
 
 - Our Python implementation is very slow
 -->
-
+<!--
 - Going forward we will use the `PyCryptodome` library to generate prime numbers
-
-## Day 3: The RSA Algorithm and Networking
+-->
+## Day 3: Networking & Firewall
 
 <!--
 ### Review
@@ -518,7 +528,7 @@ def get_prime(n):
 ![Block Diagram](https://github.com/CamelClarkson/ACSC/blob/main/get_prime.png?raw=true)
 - Block diagram
 -->
-
+<!--
 ### RSA
 - [RSA](https://www.youtube.com/watch?v=Z8M2BTscoD4)
 #### Libraries and Argparse
@@ -634,7 +644,7 @@ def encrypt(e, n, in_file, out_file):
 ```
 
 #### Decryption
-- Implement the decryption porition of the RSA algorithm
+- Implement the decryption portion of the RSA algorithm
 ```python
 def decrypt(d, n, in_file, out_file):
     with open(in_file, 'r') as f:
@@ -681,17 +691,18 @@ elif args.decrypt is not None:
     decrypt(d, n, args.decrypt[1], args.decrypt[2])
 ```
 - Now test out your cryptosystem!
-
+-->
 <!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)-->
 ### Networking
 - [IP Addresses](https://youtu.be/7_-qWlvQQtY)
 - [Network Ports](https://youtu.be/uMwzsh_Dd9Y)
-<!-- - [Common Ports](http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php)
+- [Common Ports](http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php)
 - [ifconfig](https://goinbigdata.com/demystifying-ifconfig-and-network-interfaces-in-linux/)
 
 #### Insecure Connection
 - Telnet, FTP, [RLogin/Rsh](https://sourcedaddy.com/networking/rlogin-rsh-and-rcp.html)
--->
+
+
 
 #### Secure Connection
 - [SSH](https://youtu.be/v_cVEpESG3g) 
@@ -704,34 +715,50 @@ elif args.decrypt is not None:
 - SSH into partner's machine with previously created account
 -->
 
-<!-- ### How to tell what doors (ports and services) are open
-- netstat -lntu
-- nmap localhost
-- [nmap cheat sheet](https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/) -->
-
 ### How to detect if someone is on your machine?
 - w
 - who
 - lastlog
 
-### How to kill a process
-- ps
-- kill
-- Put commands in background with `&`
-- wget `forever`
-- wget https://raw.githubusercontent.com/camel-clarkson/CSC/CSC2021s/script/forever
-- chmod of the file property
-- Run `forever` in background
-- Find `forever`'s pid using `ps`
-- Kill `forever` with the `kill` commandj
+### How to tell what doors (ports and services) are open
+- netstat -lntu
+- nmap localhost
+- [nmap cheat sheet](https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/) 
 
+#### Analyze Network Packet with Wireshark
+- [Wireshark](https://www.wireshark.org/docs/wsug_html_chunked/)
+- Install Wireshark `apt install wireshark`
+- Use Wireshark to intercept Telnet connection
+  
+### Apache
+- How does the web work? [video](https://www.youtube.com/watch?v=keo0dglCj7I)
+- [install and run Apache web server](https://youtu.be/-q8Jj4aAWYw)
+- Configuring Apache - httpd.conf
+- Making your webpage - /var/www/html/index.html
+- Content of index.html
+```
+<html><body><h1>It works!</h1>
+<p>This is the default web page for this server.</p>
+<p>The web server software is running but no content has been added, yet.</p>
+</body></html>
+```
+- [Intro to HTML](https://youtu.be/jVMKUyBXiiY) 
+
+### System Services
+- start, stop, restart
+- /etc/init.d
+
+### Firewalls
+- [UFW](https://www.youtube.com/watch?v=cscIe9fYKMU)
+- Practice denying your partner through both port and IP addr.
+<!--
 ### HTML5, CSS, and Javascript
 - How does the web work? [video](https://www.youtube.com/watch?v=keo0dglCj7I)
 - Create a new directory for this project and navigate to it
 - Download `public.tar.gz` from this github repo (not using wget, but download directly from the github page)
 - Use the `tar` command to extract the conents and use the `man` command to figure out what flags to use
 
-<!--
+
 ### Exercise
 - Download the `day3_data.csv` file by using `wget`, i.e., `wget https://raw.githubusercontent.com/CamelClarkson/CSC/2022/day3_data.csv` 
 - This spreadsheet has 4 columns, `lastname`, `firstname`, `email`, `grade`
@@ -803,13 +830,19 @@ elif args.decrypt is not None:
 - Ensure that you see your web page
 - Kill the node server using the `kill` command -->
   
-### Malware
+
+  
+## Day 4 - Running a Web Server and XXS Attacks
+
+### Malware Types
 - [Malware](https://youtu.be/juw6sPEGuEk)
 - [Virus vs Worm vs Trojan Horse](https://youtu.be/y8a3QoTg4VQ)
 - [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
 - Ransomware [Video1](https://youtu.be/FV-HW3NYdF8)  [Video2](https://youtu.be/Vkjekr6jacg)
-## Day 4 - Running a Web Server and XXS Attacks
-
+- Cryptojacking
+- Botnets
+- Spyware
+  
 <!-- ### HTML5, CSS, and Javascript (continued)
 - The contents of the `public.tar.gz` file contain all the HTML, CSS, and client-side JS for you website
 - The main html file is located at `public/index.html`
