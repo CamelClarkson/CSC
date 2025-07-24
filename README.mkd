@@ -520,7 +520,7 @@ def get_prime(n):
 <!--
 - Going forward we will use the `PyCryptodome` library to generate prime numbers
 -->
-## Day 3: Networking & Firewall
+## Day 3: Virtual Machine & Networking
 
 <!--
 ### Review
@@ -693,6 +693,33 @@ elif args.decrypt is not None:
 - Now test out your cryptosystem!
 -->
 <!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)-->
+
+### Intro to Virtual Machines
+  - [What is a Virtual Machine (VM)?](https://www.youtube.com/watch?v=yIVXjl4SwVo)
+  - [Why VM?](https://www.linkedin.com/learning/learning-vmware-vsphere-6-5/why-virtual-machines)
+  - Setup VirtualBox
+  - Guest Addtitions 'CD'
+  - "Bridged" Network to wifi or wired
+  
+#### Kali Linux
+- [What is Kali Linux?]()
+
+### Installing Software/Packages
+- [apt-get](https://youtu.be/EJgXqQvqaIM)
+- Update & Upgrade
+- Install & Unistall
+- Look at all Packages in Ubuntu Software Manager
+
+### Users/Groups
+- [adduser/group](https://www.youtube.com/watch?v=-OzmiIPOTxI)
+- Add a user to your machine
+  - username = student ; pw = student
+- Passwords (strong passwords are IMPORTANT!)
+- Switch Users
+- Permissions (root vs normal user)
+- deluser
+- Exercise - Can you add, then delete a user?
+
 ### Networking
 - [IP Addresses](https://youtu.be/7_-qWlvQQtY)
 - [Network Ports](https://youtu.be/uMwzsh_Dd9Y)
@@ -702,11 +729,10 @@ elif args.decrypt is not None:
 #### Insecure Connection
 - Telnet, FTP, [RLogin/Rsh](https://sourcedaddy.com/networking/rlogin-rsh-and-rcp.html)
 
-
-
 #### Secure Connection
 - [SSH](https://youtu.be/v_cVEpESG3g) 
 - [SSH movie](https://youtu.be/0PxTAn4g20U?si=tMmZDzkzApzDjEXT)
+- [SSH Setup](https://www.youtube.com/watch?v=EuIYabZS3ow)
 - SSH into a partner's machine
 <!--
 - /etc/ssh/sshd\_config 
@@ -715,6 +741,10 @@ elif args.decrypt is not None:
 - SSH into partner's machine with previously created account
 -->
 
+### System Services
+- start, stop, restart
+- /etc/init.d
+  
 ### How to detect if someone is on your machine?
 - w
 - who
@@ -725,10 +755,27 @@ elif args.decrypt is not None:
 - nmap localhost
 - [nmap cheat sheet](https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/) 
 
+### Kali Tools
+#### Social Engineering Site Cloner Using SET
+- Clone site to fish for user login and password
+#### Scanner target machine Vulnerabilities using nmap
+- Ping sweep
+- Scan for target open port
+#### Cracking Passwords With John the Ripper
 #### Analyze Network Packet with Wireshark
 - [Wireshark](https://www.wireshark.org/docs/wsug_html_chunked/)
-- Install Wireshark `apt install wireshark`
-- Use Wireshark to intercept Telnet connection
+- [Use Wireshark to intercept Telnet connection](https://www.youtube.com/watch?v=hnx8Jy0gDyw)
+- Can you do the same for ssh?
+
+### Firewalls
+- [UFW](https://www.youtube.com/watch?v=cscIe9fYKMU)
+- [ufw cheat sheet](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
+- Check ufw status
+- Set allow rule
+- Set deny rule
+- Delete rule
+- Practice denying your partner through both port and IP addr.
+- How to make machine more secure?
   
 ### Apache
 - How does the web work? [video](https://www.youtube.com/watch?v=keo0dglCj7I)
@@ -744,13 +791,8 @@ elif args.decrypt is not None:
 ```
 - [Intro to HTML](https://youtu.be/jVMKUyBXiiY) 
 
-### System Services
-- start, stop, restart
-- /etc/init.d
 
-### Firewalls
-- [UFW](https://www.youtube.com/watch?v=cscIe9fYKMU)
-- Practice denying your partner through both port and IP addr.
+
 <!--
 ### HTML5, CSS, and Javascript
 - How does the web work? [video](https://www.youtube.com/watch?v=keo0dglCj7I)
