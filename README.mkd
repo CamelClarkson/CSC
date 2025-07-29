@@ -153,7 +153,6 @@ echo "Sum is $c"
 - Work through this tutorial on regex: [Regex Tutorial](http://regextutorials.com/intro.html?Basic%20symbols)
 
 
-<!--
 ## Day 2 - Introduction to Python and Encryption
 [Sheldon likes Ubuntu](https://youtu.be/8qd_CX01sYg?si=qxqEN7svqOUSaQ85)
 
