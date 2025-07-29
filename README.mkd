@@ -694,7 +694,6 @@ elif args.decrypt is not None:
 -->
 <!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)-->
 
-<!--
 ### Intro to Virtual Machines
   - [What is a Virtual Machine (VM)?](https://www.youtube.com/watch?v=yIVXjl4SwVo)
   - [Why VM?](https://www.linkedin.com/learning/learning-vmware-vsphere-6-5/why-virtual-machines)
@@ -722,7 +721,7 @@ sudo apt-get --purge remove package_name
 ### Users/Groups
 - [adduser/group](https://www.youtube.com/watch?v=-OzmiIPOTxI)
 - Add a user to your machine
-  - username = student ; pw = student
+  - username = student-remote ; pw = student-remote
 - Passwords (strong passwords are IMPORTANT!)
 - Switch Users
 - Permissions (root vs normal user)
@@ -735,6 +734,21 @@ sudo apt-get --purge remove package_name
 - [Common Ports](http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php)
 - [ifconfig](https://goinbigdata.com/demystifying-ifconfig-and-network-interfaces-in-linux/)
 
+### Apache
+- How does the web work? [video](https://www.youtube.com/watch?v=keo0dglCj7I)
+- [install and run Apache web server](https://youtu.be/-q8Jj4aAWYw)
+- Configuring Apache - httpd.conf
+- Making your webpage - /var/www/html/index.html
+- Content of index.html
+```
+<html><body><h1>It works!</h1>
+<p>This is the default web page for this server.</p>
+<p>The web server software is running but no content has been added, yet.</p>
+</body></html>
+```
+- [Intro to HTML](https://youtu.be/jVMKUyBXiiY) 
+
+
 #### Insecure Connection
 - Telnet, FTP, [RLogin/Rsh](https://sourcedaddy.com/networking/rlogin-rsh-and-rcp.html)
 
@@ -743,7 +757,7 @@ sudo apt-get --purge remove package_name
 - [SSH movie](https://youtu.be/0PxTAn4g20U?si=tMmZDzkzApzDjEXT)
 - [SSH Setup](https://www.youtube.com/watch?v=EuIYabZS3ow)
 - SSH into a partner's machine
--->
+
   
 <!--
 - /etc/ssh/sshd\_config 
@@ -751,8 +765,6 @@ sudo apt-get --purge remove package_name
 - [SSH Keys](https://www.youtube.com/watch?v=EuIYabZS3ow)
 - SSH into partner's machine with previously created account
 -->
-
-<!--
 
 ### System Services
 - start, stop, restart
@@ -770,10 +782,10 @@ sudo apt-get --purge remove package_name
 
 ### Kali Tools
 #### Social Engineering Site Cloner Using SET
-- Clone site to fish for user login and password
+- [Clone site to fish for user login and password](https://www.stationx.net/social-engineer-toolkit/)
 #### Scanner target machine Vulnerabilities using nmap
 - Ping sweep
-- Scan for target open port
+- Scan for the target open port
 #### Cracking Passwords With John the Ripper
 #### Analyze Network Packet with Wireshark
 - [Wireshark](https://www.wireshark.org/docs/wsug_html_chunked/)
@@ -784,27 +796,17 @@ sudo apt-get --purge remove package_name
 - [UFW](https://www.youtube.com/watch?v=cscIe9fYKMU)
 - [ufw cheat sheet](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
 - Check ufw status
+``` sudo ufw status ```
 - Set allow rule
+``` sudo ufw allow ssh ```
 - Set deny rule
+``` sudo ufw deny ssh ```
 - Delete rule
+``` sudo ufw delete deny ssh ```
 - Practice denying your partner through both port and IP addr.
 - How to make machine more secure?
   
-### Apache
-- How does the web work? [video](https://www.youtube.com/watch?v=keo0dglCj7I)
-- [install and run Apache web server](https://youtu.be/-q8Jj4aAWYw)
-- Configuring Apache - httpd.conf
-- Making your webpage - /var/www/html/index.html
-- Content of index.html
-```
-<html><body><h1>It works!</h1>
-<p>This is the default web page for this server.</p>
-<p>The web server software is running but no content has been added, yet.</p>
-</body></html>
-```
-- [Intro to HTML](https://youtu.be/jVMKUyBXiiY) 
 
--->
 
 <!--
 ### HTML5, CSS, and Javascript
@@ -819,6 +821,8 @@ sudo apt-get --purge remove package_name
 - This spreadsheet has 4 columns, `lastname`, `firstname`, `email`, `grade`
 - Write a command that returns all the entries of students who had an `A` for their `grade`
 - Write a command that returns only students whose `lastname` begins with A-L and `grade` is B or higher
+
+--.
 
 <!-- ## Day 4 - Networking
   - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4) -->
