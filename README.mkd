@@ -705,12 +705,20 @@ elif args.decrypt is not None:
   - "Bridged" Network to wifi or wired
   
 #### Kali Linux
-- [What is Kali Linux?]()
+- [What is Kali Linux?](https://www.helpnetsecurity.com/2022/10/11/kali-linux-introduction-video/)
 
 ### Installing Software/Packages
 - [apt-get](https://youtu.be/EJgXqQvqaIM)
 - Update & Upgrade
+``` 
+sudo apt-get update
+sudo apt-get upgrade
+```
 - Install & Unistall
+```
+sudo apt-get install package_name
+sudo apt-get --purge remove package_name
+```
 - Look at all Packages in Ubuntu Software Manager
 
 ### Users/Groups
