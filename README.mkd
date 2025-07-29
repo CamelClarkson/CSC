@@ -369,10 +369,8 @@ with open(args.file, 'w') as f:
 ### Introduction to Prime Numbers
 - What is a prime number?
 - Why might primes be useful for security? [Video](https://youtu.be/56fa8Jz-FQQ)
-<!--
 ### Miller-Rabin Primality Test
-- [Algorithm](https://www.youtube.com/watch?v=p5S0C8oKpsM) to test if an integer is prime developed by Dr. Gary Miller and Dr. Michael Rain in the later 1970s
--->
+- [Algorithm](https://www.youtube.com/watch?v=p5S0C8oKpsM) to test if an integer is prime developed by Dr. Gary Miller and Dr. Michael Rain in the later 1970
 <!--
 - Here is a template to get started
 ```python
