@@ -519,9 +519,9 @@ def get_prime(n):
 <!--
 - Going forward we will use the `PyCryptodome` library to generate prime numbers
 -->
-<!--
+
 ## Day 3: Virtual Machine & Networking
--->
+
 <!--
 ### Review
 - Prime Number Generation
@@ -694,12 +694,12 @@ elif args.decrypt is not None:
 -->
 <!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)-->
 
+
 ### Intro to Virtual Machines
   - [What is a Virtual Machine (VM)?](https://www.youtube.com/watch?v=yIVXjl4SwVo)
   - [Why VM?](https://www.linkedin.com/learning/learning-vmware-vsphere-6-5/why-virtual-machines)
   - Setup VirtualBox
   - Guest Addtitions 'CD'
-  - "Bridged" Network to wifi or wired
   
 #### Kali Linux
 - [What is Kali Linux?](https://www.helpnetsecurity.com/2022/10/11/kali-linux-introduction-video/)
@@ -746,19 +746,79 @@ sudo apt-get --purge remove package_name
 <p>The web server software is running but no content has been added, yet.</p>
 </body></html>
 ```
-- [Intro to HTML](https://youtu.be/jVMKUyBXiiY) 
+- [Intro to HTML](https://youtu.be/jVMKUyBXiiY)
+- Modify your webpage index.html
+  
+### Firewalls
+- [UFW](https://www.youtube.com/watch?v=cscIe9fYKMU)
+- [ufw cheat sheet](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
+- Check ufw status
+``` sudo ufw status ```
+- Enable ufw firewall
+``` sudo ufw enable ```
+- Set allow rule
+``` sudo ufw allow out to any port 80 ```
+- Set deny rule
+``` sudo ufw deny out to any port 443 ```
+- Delete rule
+``` sudo ufw delete deny out to any port 443 ```
+- Practice denying your partner through both port and IP addr.
+- How to make machine more secure?
+
 
 
 #### Insecure Connection
-- Telnet, FTP, [RLogin/Rsh](https://sourcedaddy.com/networking/rlogin-rsh-and-rcp.html)
+- Telnet, FTP
+- [Telnet installation](https://www.youtube.com/watch?v=8iRMtheXsnU)
+```
+sudo apt get telnetd xinetd
+sudo systemctl start xinetd.service
+sudo vim /etc/xinetd.d/telnet
+```
+telnet configuration file
+```
+service telnet
+{
+disable = no
+flags = REUSE
+socket_type = stream
+wait = no
+user = root
+server = /usr/sbin/in.telnetd
+log_on_failure += USERID
+}
+```
+```
+sudo systemctl restart xinetd.service
+telnet localhost
+```
 
 #### Secure Connection
 - [SSH](https://youtu.be/v_cVEpESG3g) 
 - [SSH movie](https://youtu.be/0PxTAn4g20U?si=tMmZDzkzApzDjEXT)
 - [SSH Setup](https://www.youtube.com/watch?v=EuIYabZS3ow)
+  ```
+  sudo apt install openssh-server
+  sudo systemctl start ssh
+  ```
 - SSH into a partner's machine
 
-  
+#### Analyze Network Packet with Wireshark
+- [Wireshark](https://www.wireshark.org/docs/wsug_html_chunked/)
+- [Use Wireshark to intercept Telnet connection](https://www.youtube.com/watch?v=hnx8Jy0gDyw)
+- Can you do the same for ssh?
+
+#### Port forwarding
+- [What is prot forwarding?](https://www.youtube.com/watch?v=3RfLn2jcGjA)
+- [How to set up port forwarding for Virtualbox](https://www.youtube.com/watch?v=Kq_JOGX0MW4)
+- telnet from host to VM
+```
+telnet 127.0.0.1 1224
+```
+- ssh from host to VM
+```
+ssh student@127.0.0.1 -p 1222
+```
 <!--
 - /etc/ssh/sshd\_config 
 - [SSH Install](https://youtu.be/0KXZ6GnVza8)
@@ -766,9 +826,6 @@ sudo apt-get --purge remove package_name
 - SSH into partner's machine with previously created account
 -->
 
-### System Services
-- start, stop, restart
-- /etc/init.d
   
 ### How to detect if someone is on your machine?
 - w
@@ -787,25 +844,8 @@ sudo apt-get --purge remove package_name
 - Ping sweep
 - Scan for the target open port
 #### Cracking Passwords With John the Ripper
-#### Analyze Network Packet with Wireshark
-- [Wireshark](https://www.wireshark.org/docs/wsug_html_chunked/)
-- [Use Wireshark to intercept Telnet connection](https://www.youtube.com/watch?v=hnx8Jy0gDyw)
-- Can you do the same for ssh?
 
-### Firewalls
-- [UFW](https://www.youtube.com/watch?v=cscIe9fYKMU)
-- [ufw cheat sheet](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
-- Check ufw status
-``` sudo ufw status ```
-- Set allow rule
-``` sudo ufw allow ssh ```
-- Set deny rule
-``` sudo ufw deny ssh ```
-- Delete rule
-``` sudo ufw delete deny ssh ```
-- Practice denying your partner through both port and IP addr.
-- How to make machine more secure?
-  
+
 
 
 <!--
