@@ -841,10 +841,19 @@ ssh student@127.0.0.1 -p 1222
 #### Social Engineering Site Cloner Using SET
 - [Clone site to fish for user login and password](https://www.stationx.net/social-engineer-toolkit/)
 #### Scanner target machine Vulnerabilities using nmap
-- Ping sweep
-- Scan for the target open port
+- [Ping sweep](https://www.stationx.net/nmap-ping-sweep/)
+```
+nmap -sn <target ip/subnet>
+nmap -sn <target ip/subnet> -oN ping-results.txt
+```
+- [Scan for the target open port](https://www.stationx.net/nmap-vulnerability-scan/)
+```
+nmap -O <target ip>
+nmap -sV <target ip>
+nmap --script vuln <target ip>
+```
 #### Cracking Passwords With John the Ripper
-
+(https://www.stationx.net/how-to-use-john-the-ripper/)
 
 
 
