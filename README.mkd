@@ -722,10 +722,26 @@ sudo apt-get --purge remove package_name
 - [adduser/group](https://www.youtube.com/watch?v=-OzmiIPOTxI)
 - Add a user to your machine
   - username = student-remote ; pw = student-remote
+    ```
+    sudo adduser newusername
+    sudo adduser -m newusername
+    id newusername
+    ```
 - Passwords (strong passwords are IMPORTANT!)
+  ```
+  sudo passwd newusername
+  cat /etc/passwd | grep newusername
+  ```
 - Switch Users
+```
+su - username
+```
 - Permissions (root vs normal user)
 - deluser
+```
+ sudo userdel username
+ sudo userdel -r username
+```
 - Exercise - Can you add, then delete a user?
 
 ### Networking
