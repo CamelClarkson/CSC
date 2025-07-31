@@ -817,7 +817,7 @@ telnet localhost
   sudo apt install openssh-server
   sudo systemctl start ssh
   ```
-- SSH into a partner's machine
+
 
 #### Analyze Network Packet with Wireshark
 - [Wireshark](https://www.wireshark.org/docs/wsug_html_chunked/)
@@ -825,7 +825,7 @@ telnet localhost
 - Can you do the same for ssh?
 
 #### Port forwarding
-- [What is prot forwarding?](https://www.youtube.com/watch?v=3RfLn2jcGjA)
+- [What is port forwarding?](https://www.youtube.com/watch?v=3RfLn2jcGjA)
 - [How to set up port forwarding for Virtualbox](https://www.youtube.com/watch?v=Kq_JOGX0MW4)
 - telnet from host to VM
 ```
@@ -967,8 +967,8 @@ nmap --script vuln <target ip>
 - Spyware
 
 
-  
- ### HTML5, CSS, and Javascript (continued)
+
+<!-- ### HTML5, CSS, and Javascript (continued)
 - The contents of the `public.tar.gz` file contain all the HTML, CSS, and client-side JS for you website
 - The main html file is located at `public/index.html`
 - Customize your `index.html` to include your name somewhere on the page (hint look for either a `<h1>` or `<h2>` tag)
@@ -996,10 +996,13 @@ app.listen(port, function() {
         console.log('Server on port: ' + port);
 });
 ```
+
 - Run the server in the background using the command `node app.js &`
 - To see your webpage, open up your preferred web browser and navigate to `localhost:6000`
 - Ensure that you see your web page
-- Kill the node server using `kill` -->
+- Kill the node server using `kill`
+
+ -->
 
 
 
