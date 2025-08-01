@@ -1290,7 +1290,7 @@ data.message = sanitize_input(data.message);
 ```
 - To santize code use string replace, e.g., `content = content.replace(/stuff-to-replace/g, 'replaced-string');`
 
-<!---
+
 
 ## Day 5 - Timing Based Attacks
 - Example [video](https://www.youtube.com/watch?v=2-zQp26nbY8)
@@ -1426,4 +1426,3 @@ print(f'Most likely length is {length}')
 password = crack_password(user, length)
 print(f'Cracked password for {user} is {password}')
 ```
--->
