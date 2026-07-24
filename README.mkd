@@ -1,4 +1,4 @@
-Cyber Camp 2025
+Cyber Camp 2026
 ======================
 
 # Summary
@@ -137,7 +137,7 @@ echo "Sum is $c"
 - kill
 - Put commands in background with `&`
 - wget `forever`
-- wget https://raw.githubusercontent.com/CamelClarkson/CSC/refs/heads/2025/script/forever
+- wget https://raw.githubusercontent.com/CamelClarkson/CSC/refs/heads/2026/script/forever
 - chmod of the file property
 - Run `forever` in background
 - Find `forever`'s pid using `ps`
