@@ -152,7 +152,7 @@ echo "Sum is $c"
 - Powerful tool for searching
 - Work through this tutorial on regex: [Regex Tutorial](http://regextutorials.com/intro.html?Basic%20symbols)
 
-
+<!--
 ## Day 2 - Introduction to Python and Encryption
 [Sheldon likes Ubuntu](https://youtu.be/8qd_CX01sYg?si=qxqEN7svqOUSaQ85)
 
@@ -519,7 +519,9 @@ def get_prime(n):
 <!--
 - Going forward we will use the `PyCryptodome` library to generate prime numbers
 -->
+-->
 
+<!--
 ## Day 3: Virtual Machine & Networking
 
 <!--
@@ -888,7 +890,7 @@ nmap --script vuln <target ip>
 - Write a command that returns only students whose `lastname` begins with A-L and `grade` is B or higher
 
 --.
-
+-->
 <!-- ## Day 4 - Networking
   - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4) -->
 
@@ -954,7 +956,7 @@ nmap --script vuln <target ip>
 - Ensure that you see your web page
 - Kill the node server using the `kill` command -->
 
-  
+<!--  
 ## Day 4 - Running a Web Server and XXS Attacks
 
 ### Malware Types
@@ -1290,8 +1292,9 @@ data.message = sanitize_input(data.message);
 ```
 - To santize code use string replace, e.g., `content = content.replace(/stuff-to-replace/g, 'replaced-string');`
 
+ -->
 
-
+ <!--
 ## Day 5 - Timing Based Attacks
 - Example [video](https://www.youtube.com/watch?v=2-zQp26nbY8)
 - Use timeit library to measure execution time
@@ -1426,3 +1429,5 @@ print(f'Most likely length is {length}')
 password = crack_password(user, length)
 print(f'Cracked password for {user} is {password}')
 ```
+
+ -->
