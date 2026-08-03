@@ -371,6 +371,8 @@ with open(args.file, 'w') as f:
 - Why might primes be useful for security? [Video](https://youtu.be/56fa8Jz-FQQ)
 ### Miller-Rabin Primality Test
 - [Algorithm](https://www.youtube.com/watch?v=p5S0C8oKpsM) to test if an integer is prime developed by Dr. Gary Miller and Dr. Michael Rain in the later 1970
+-->
+
 <!--
 - Here is a template to get started
 ```python
@@ -519,10 +521,9 @@ def get_prime(n):
 <!--
 - Going forward we will use the `PyCryptodome` library to generate prime numbers
 -->
--->
 
-<!--
-## Day 3: Virtual Machine & Networking
+
+
 
 <!--
 ### Review
@@ -695,7 +696,8 @@ elif args.decrypt is not None:
 - Now test out your cryptosystem!
 -->
 <!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)-->
-
+<!--
+## Day 3: Virtual Machine & Networking
 
 ### Intro to Virtual Machines
   - [What is a Virtual Machine (VM)?](https://www.youtube.com/watch?v=yIVXjl4SwVo)
@@ -837,12 +839,7 @@ telnet 127.0.0.1 1224
 ```
 ssh student@127.0.0.1 -p 1222
 ```
-<!--
-- /etc/ssh/sshd\_config 
-- [SSH Install](https://youtu.be/0KXZ6GnVza8)
-- [SSH Keys](https://www.youtube.com/watch?v=EuIYabZS3ow)
-- SSH into partner's machine with previously created account
--->
+
 
   
 ### How to detect if someone is on your machine?
@@ -872,8 +869,14 @@ nmap --script vuln <target ip>
 ```
 #### Cracking Passwords With John the Ripper
 (https://www.stationx.net/how-to-use-john-the-ripper/)
+-->
 
-
+<!--
+- /etc/ssh/sshd\_config 
+- [SSH Install](https://youtu.be/0KXZ6GnVza8)
+- [SSH Keys](https://www.youtube.com/watch?v=EuIYabZS3ow)
+- SSH into partner's machine with previously created account
+-->
 
 <!--
 ### HTML5, CSS, and Javascript
@@ -890,7 +893,7 @@ nmap --script vuln <target ip>
 - Write a command that returns only students whose `lastname` begins with A-L and `grade` is B or higher
 
 --.
--->
+
 <!-- ## Day 4 - Networking
   - [Sheldon likes Ubuntu](https://youtu.be/X_mzgdQGwY4) -->
 
@@ -956,20 +959,6 @@ nmap --script vuln <target ip>
 - Ensure that you see your web page
 - Kill the node server using the `kill` command -->
 
-<!--  
-## Day 4 - Running a Web Server and XXS Attacks
-
-### Malware Types
-- [Malware](https://youtu.be/juw6sPEGuEk)
-- [Virus vs Worm vs Trojan Horse](https://youtu.be/y8a3QoTg4VQ)
-- [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
-- Ransomware [Video1](https://youtu.be/FV-HW3NYdF8)  [Video2](https://youtu.be/Vkjekr6jacg)
-- Cryptojacking
-- Botnets
-- Spyware
-
-
-
 <!-- ### HTML5, CSS, and Javascript (continued)
 - The contents of the `public.tar.gz` file contain all the HTML, CSS, and client-side JS for you website
 - The main html file is located at `public/index.html`
@@ -1005,7 +994,18 @@ app.listen(port, function() {
 - Kill the node server using `kill`
 
  -->
+ 
+<!--  
+## Day 4 - Running a Web Server and XXS Attacks
 
+### Malware Types
+- [Malware](https://youtu.be/juw6sPEGuEk)
+- [Virus vs Worm vs Trojan Horse](https://youtu.be/y8a3QoTg4VQ)
+- [Ransomware](https://www.youtube.com/watch?v=nNNDrS6-5Vg)
+- Ransomware [Video1](https://youtu.be/FV-HW3NYdF8)  [Video2](https://youtu.be/Vkjekr6jacg)
+- Cryptojacking
+- Botnets
+- Spyware
 
 
 ### Build Basic Bootstrap Webpage with Node.js
@@ -1220,9 +1220,6 @@ $(document).ready(() => {
 
 });
 ```
-
-
-<!-- Download and extract using `wget` and then `tar`: [public.tar.gz](https://raw.githubusercontent.com/CamelClarkson/ACSC/main/public.tar.gz) -->
 
 - Modify app.js so it contains socket.io handling
 ```js
