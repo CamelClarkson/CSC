@@ -695,7 +695,7 @@ elif args.decrypt is not None:
 - Now test out your cryptosystem!
 -->
 <!-- ### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)-->
-<!--
+
 ## Day 3: Virtual Machine & Networking
 
 ### Intro to Virtual Machines
@@ -868,7 +868,7 @@ nmap --script vuln <target ip>
 ```
 #### Cracking Passwords With John the Ripper
 (https://www.stationx.net/how-to-use-john-the-ripper/)
--->
+
 
 <!--
 - /etc/ssh/sshd\_config 
