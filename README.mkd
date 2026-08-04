@@ -152,7 +152,7 @@ echo "Sum is $c"
 - Powerful tool for searching
 - Work through this tutorial on regex: [Regex Tutorial](http://regextutorials.com/intro.html?Basic%20symbols)
 
-<!--
+
 ## Day 2 - Introduction to Python and Encryption
 [Sheldon likes Ubuntu](https://youtu.be/8qd_CX01sYg?si=qxqEN7svqOUSaQ85)
 
@@ -371,7 +371,6 @@ with open(args.file, 'w') as f:
 - Why might primes be useful for security? [Video](https://youtu.be/56fa8Jz-FQQ)
 ### Miller-Rabin Primality Test
 - [Algorithm](https://www.youtube.com/watch?v=p5S0C8oKpsM) to test if an integer is prime developed by Dr. Gary Miller and Dr. Michael Rain in the later 1970
--->
 
 <!--
 - Here is a template to get started
