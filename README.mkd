@@ -994,7 +994,7 @@ app.listen(port, function() {
 
  -->
  
-<!--  
+
 ## Day 4 - Running a Web Server and XXS Attacks
 
 ### Malware Types
@@ -1288,7 +1288,7 @@ data.message = sanitize_input(data.message);
 ```
 - To santize code use string replace, e.g., `content = content.replace(/stuff-to-replace/g, 'replaced-string');`
 
- -->
+
 
  <!--
 ## Day 5 - Timing Based Attacks
